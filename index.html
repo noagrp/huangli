@@ -118,7 +118,7 @@
 <script src="./src/huangli-engine.js"></script>
 <script>
 (async()=>{
-  const engine = await loadHuangliEngine();
+  const engine = await loadHuangliEngine('./data/huangli-terms.json?v=20261004-2');
   const categoriesEl = document.getElementById('categories');
   const detailEl = document.getElementById('detail');
   const detailOverlay = document.getElementById('detailOverlay');
