@@ -111,10 +111,19 @@
   function renderCategories(){
     categoriesEl.innerHTML = engine.data.categories.map(category =>
       '<article class="category"><h2>'+category.name+'</h2><p>'+category.summary+'</p><div class="terms">'+
-      category.terms.map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('')+
+      (category.terms.length > 24
+        ? category.terms.slice(0,18).map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('') +
+          '<button class="term" data-expand="'+category.id+'">查看全部 '+category.terms.length+'</button>'
+        : category.terms.map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join(''))+
       '</div></article>'
     ).join('');
     categoriesEl.querySelectorAll('[data-term]').forEach(btn=>btn.addEventListener('click',()=>show(engine.getTerm(btn.dataset.term))));
+    categoriesEl.querySelectorAll('[data-expand]').forEach(btn=>btn.addEventListener('click',()=>{
+      const category = engine.getCategory(btn.dataset.expand);
+      const article = btn.closest('.category');
+      article.querySelector('.terms').innerHTML = category.terms.map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('');
+      article.querySelectorAll('[data-term]').forEach(termBtn=>termBtn.addEventListener('click',()=>show(engine.getTerm(termBtn.dataset.term))));
+    }));
   }
 
   function renderSearch(query){
