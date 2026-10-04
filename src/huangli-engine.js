@@ -74,12 +74,38 @@ class HuangliEngine {
       } else if (['xishen','caishen','fushen'].includes(key)) {
         output[key] = { value, explanation: this.getTerm(key) };
       } else if (key === 'yi') {
-        output[key] = { value, explanation: this.getTerm('宜') };
+        output[key] = {
+          value,
+          explanation: this.getTerm('宜'),
+          items: this.explainActivities(value)
+        };
       } else if (key === 'ji') {
-        output[key] = { value, explanation: this.getTerm('忌') };
+        output[key] = {
+          value,
+          explanation: this.getTerm('忌'),
+          items: this.explainActivities(value)
+        };
       }
     }
     return output;
+  }
+
+  explainActivities(values) {
+    const list = Array.isArray(values) ? values : [values];
+    return list.filter(v => v != null && v !== '').map(value => ({
+      value,
+      explanation: this.getTerm(value)
+    }));
+  }
+
+  getActivity(name) {
+    const term = this.getTerm(name);
+    return term && term.categoryId === 'yiji-activities' ? term : null;
+  }
+
+  listActivities() {
+    const category = this.getCategory('yiji-activities');
+    return category ? category.terms : [];
   }
 
   listZhixing() {
