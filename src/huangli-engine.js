@@ -10,6 +10,7 @@ class HuangliEngine {
 
     for (const category of data.categories) {
       this.categoryMap.set(category.id, category);
+      if (category.referenceOnly) continue;
       for (const term of category.terms || []) {
         const entry = { ...term, categoryId: category.id, categoryName: category.name };
         this.termMap.set(term.id, entry);
@@ -43,6 +44,7 @@ class HuangliEngine {
     if (!q) return [];
     const results = [];
     for (const category of this.data.categories) {
+      if (category.referenceOnly) continue;
       for (const term of category.terms || []) {
         const haystack = [
           term.id, term.name, term.short, term.explanation,
