@@ -56,6 +56,10 @@
     .category{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border);border-radius:18px;padding:17px;box-shadow:var(--shadow)}
     .category h2{margin:0;color:var(--lime-soft);font-size:18px}
     .category>p{margin:8px 0 14px;color:var(--muted);font-size:12px;line-height:1.6}
+    .category.reference{box-shadow:none;background:rgba(21,28,15,.58);border-style:dashed}
+    .category.reference h2{color:#c9c9a8}
+    .category.reference>p{margin-bottom:0;color:#8f987a}
+    .reference-badge{display:inline-block;margin-top:10px;padding:5px 8px;border-radius:999px;border:1px solid rgba(170,181,138,.22);color:#8f987a;font-size:11px}
     .terms{display:flex;flex-wrap:wrap;gap:8px}
     button.term{border:1px solid rgba(215,187,85,.22);background:#0e130a;color:var(--text);padding:8px 10px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px}
     button.term:hover{border-color:var(--lime);color:var(--lime-soft)}
@@ -87,7 +91,7 @@
   <section class="detail" id="detail">
     <div class="eyebrow">黄历术语</div>
     <h2>选择一个术语</h2>
-    <p>点击上面的项目查看解释。</p>
+    <p>点击下方项目查看解释。</p>
   </section>
   <section class="grid" id="categories"></section>
 
@@ -109,14 +113,17 @@
   }
 
   function renderCategories(){
-    categoriesEl.innerHTML = engine.data.categories.map(category =>
-      '<article class="category"><h2>'+category.name+'</h2><p>'+category.summary+'</p><div class="terms">'+
-      (category.terms.length > 24
-        ? category.terms.slice(0,18).map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('') +
-          '<button class="term" data-expand="'+category.id+'">查看全部 '+category.terms.length+'</button>'
-        : category.terms.map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join(''))+
-      '</div></article>'
-    ).join('');
+    categoriesEl.innerHTML = engine.data.categories.map(category => {
+      if(category.referenceOnly){
+        return '<article class="category reference"><h2>'+category.name+'</h2><p>'+category.summary+'</p><span class="reference-badge">专题内容</span></article>';
+      }
+      return '<article class="category"><h2>'+category.name+'</h2><p>'+category.summary+'</p><div class="terms">'+
+        (category.terms.length > 24
+          ? category.terms.slice(0,18).map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('') +
+            '<button class="term" data-expand="'+category.id+'">查看全部 '+category.terms.length+'</button>'
+          : category.terms.map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join(''))+
+        '</div></article>';
+    }).join('');
     categoriesEl.querySelectorAll('[data-term]').forEach(btn=>btn.addEventListener('click',()=>show(engine.getTerm(btn.dataset.term))));
     categoriesEl.querySelectorAll('[data-expand]').forEach(btn=>btn.addEventListener('click',()=>{
       const category = engine.getCategory(btn.dataset.expand);
