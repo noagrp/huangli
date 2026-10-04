@@ -2,25 +2,25 @@
   "meta": {
     "id": "noagrp-huangli-terms",
     "name": "黄历知识",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "language": "zh-CN",
     "scope": [
-      "宜",
-      "忌",
-      "冲",
-      "煞",
+      "宜忌",
+      "宜忌词典",
+      "冲煞",
       "胎神",
       "十二值星",
       "吉神方位",
-      "宜忌词典",
-      "吉神宜趋",
-      "凶煞宜忌",
       "值日天神",
       "彭祖百忌",
-      "八字基础",
+      "天干地支",
+      "八字",
+      "五行",
+      "纳音",
       "二十四节气",
       "二十八星宿",
-      "纳音"
+      "生肖关系",
+      "神煞"
     ],
     "note": "内容用于解释传统黄历术语与文化用法，不作为科学预测或现实决策依据。"
   },
@@ -28,7 +28,7 @@
     {
       "id": "yi-ji",
       "name": "宜忌",
-      "summary": "黄历中用“宜”和“忌”表示传统上认为某日较适合或较不适合进行的事项。",
+      "summary": "“宜”与“忌”是黄历最常见的两栏，分别列出传统上较适合与较不适合进行的事项。",
       "terms": [
         {
           "id": "yi",
@@ -37,7 +37,7 @@
             "宜事"
           ],
           "short": "传统黄历中列出的适宜事项。",
-          "explanation": "“宜”表示按照传统择日体系，此日被认为较适合进行的活动。常见内容包括祭祀、出行、嫁娶、开市、入宅等。不同黄历版本可能因采用的规则不同而出现差异。",
+          "explanation": "“宜”表示传统择日体系认为当天较适合进行的事项。例如“宜：祭祀、出行、开市”，意思是这些活动在该日被列为适宜。",
           "examples": [
             "宜：祭祀、出行、开市"
           ]
@@ -49,7 +49,7 @@
             "忌事"
           ],
           "short": "传统黄历中列出的应避免事项。",
-          "explanation": "“忌”表示按照传统择日体系，此日被认为较不适合进行的活动。它属于传统民俗与历书用法，不等同于现代风险评估或科学建议。",
+          "explanation": "“忌”表示传统择日体系认为当天较不适合进行的事项。例如“忌：动土、安葬”，意思是这些活动在该日被列为避忌。",
           "examples": [
             "忌：动土、安葬"
           ]
@@ -59,1001 +59,1001 @@
     {
       "id": "yiji-activities",
       "name": "宜忌词典",
-      "summary": "解释万年历每日“宜 / 忌”中可能出现的传统活动名称；词目与 lunar-javascript 的 YI_JI 词表对应。",
+      "summary": "解释万年历“宜 / 忌”中出现的传统活动名称。",
       "terms": [
         {
           "id": "activity-jiSi",
           "sourceKey": "yj.jiSi",
           "name": "祭祀",
           "short": "祭拜神明、祖先或举行传统祭礼。",
-          "explanation": "黄历宜忌术语。“祭祀”指祭拜神明、祖先或举行传统祭礼。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "祭拜神明、祖先或举行传统祭礼。"
         },
         {
           "id": "activity-qiFu",
           "sourceKey": "yj.qiFu",
           "name": "祈福",
           "short": "祈求福佑、平安或吉祥。",
-          "explanation": "黄历宜忌术语。“祈福”指祈求福佑、平安或吉祥。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "祈求福佑、平安或吉祥。"
         },
         {
           "id": "activity-qiuSi",
           "sourceKey": "yj.qiuSi",
           "name": "求嗣",
           "short": "传统上祈求子嗣、后代。",
-          "explanation": "黄历宜忌术语。“求嗣”指传统上祈求子嗣、后代。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统上祈求子嗣、后代。"
         },
         {
           "id": "activity-kaiGuang",
           "sourceKey": "yj.kaiGuang",
           "name": "开光",
           "short": "为神像、法器等举行启用或宗教仪式。",
-          "explanation": "黄历宜忌术语。“开光”指为神像、法器等举行启用或宗教仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "为神像、法器等举行启用或宗教仪式。"
         },
         {
           "id": "activity-suHui",
           "sourceKey": "yj.suHui",
           "name": "塑绘",
           "short": "塑造、绘饰神像或宗教性形象。",
-          "explanation": "黄历宜忌术语。“塑绘”指塑造、绘饰神像或宗教性形象。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "塑造、绘饰神像或宗教性形象。"
         },
         {
           "id": "activity-qiJiao",
           "sourceKey": "yj.qiJiao",
           "name": "齐醮",
           "short": "道教设坛行醮等传统仪式。",
-          "explanation": "黄历宜忌术语。“齐醮”指道教设坛行醮等传统仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "道教设坛行醮等传统仪式。"
         },
         {
           "id": "activity-zhaiJiao",
           "sourceKey": "yj.zhaiJiao",
           "name": "斋醮",
           "short": "道教斋戒、设醮、祈禳等仪式。",
-          "explanation": "黄历宜忌术语。“斋醮”指道教斋戒、设醮、祈禳等仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "道教斋戒、设醮、祈禳等仪式。"
         },
         {
           "id": "activity-muYu",
           "sourceKey": "yj.muYu",
           "name": "沐浴",
           "short": "沐浴洁身；在黄历中也可带有洁净、斋戒意味。",
-          "explanation": "黄历宜忌术语。“沐浴”指沐浴洁身；在黄历中也可带有洁净、斋戒意味。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "沐浴洁身；在黄历中也可带有洁净、斋戒意味。"
         },
         {
           "id": "activity-chouShen",
           "sourceKey": "yj.chouShen",
           "name": "酬神",
           "short": "以祭礼感谢神明庇佑或还愿。",
-          "explanation": "黄历宜忌术语。“酬神”指以祭礼感谢神明庇佑或还愿。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "以祭礼感谢神明庇佑或还愿。"
         },
         {
           "id": "activity-zaoMiao",
           "sourceKey": "yj.zaoMiao",
           "name": "造庙",
           "short": "兴建、修建庙宇。",
-          "explanation": "黄历宜忌术语。“造庙”指兴建、修建庙宇。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "兴建、修建庙宇。"
         },
         {
           "id": "activity-siZhao",
           "sourceKey": "yj.siZhao",
           "name": "祀灶",
           "short": "祭祀灶神。",
-          "explanation": "黄历宜忌术语。“祀灶”指祭祀灶神。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "祭祀灶神。"
         },
         {
           "id": "activity-fenXiang",
           "sourceKey": "yj.fenXiang",
           "name": "焚香",
           "short": "焚烧香品以祭祀、敬神或礼佛。",
-          "explanation": "黄历宜忌术语。“焚香”指焚烧香品以祭祀、敬神或礼佛。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "焚烧香品以祭祀、敬神或礼佛。"
         },
         {
           "id": "activity-xieTu",
           "sourceKey": "yj.xieTu",
           "name": "谢土",
           "short": "工程完成后举行酬谢土地神的传统仪式。",
-          "explanation": "黄历宜忌术语。“谢土”指工程完成后举行酬谢土地神的传统仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "工程完成后举行酬谢土地神的传统仪式。"
         },
         {
           "id": "activity-chuHuo",
           "sourceKey": "yj.chuHuo",
           "name": "出火",
           "short": "传统入宅或迁移仪式中移出香火、神位等。",
-          "explanation": "黄历宜忌术语。“出火”指传统入宅或迁移仪式中移出香火、神位等。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统入宅或迁移仪式中移出香火、神位等。"
         },
         {
           "id": "activity-diaoKe",
           "sourceKey": "yj.diaoKe",
           "name": "雕刻",
           "short": "进行雕刻、刻制等工艺。",
-          "explanation": "黄历宜忌术语。“雕刻”指进行雕刻、刻制等工艺。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "进行雕刻、刻制等工艺。"
         },
         {
           "id": "activity-jiaQu",
           "sourceKey": "yj.jiaQu",
           "name": "嫁娶",
           "short": "举行婚嫁、迎娶等婚姻礼仪。",
-          "explanation": "黄历宜忌术语。“嫁娶”指举行婚嫁、迎娶等婚姻礼仪。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "举行婚嫁、迎娶等婚姻礼仪。"
         },
         {
           "id": "activity-DingHun",
           "sourceKey": "yj.DingHun",
           "name": "订婚",
           "short": "举行订立婚约的仪式。",
-          "explanation": "黄历宜忌术语。“订婚”指举行订立婚约的仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "举行订立婚约的仪式。"
         },
         {
           "id": "activity-naCai",
           "sourceKey": "yj.naCai",
           "name": "纳采",
           "short": "传统婚礼六礼之一，指男方正式送礼求婚。",
-          "explanation": "黄历宜忌术语。“纳采”指传统婚礼六礼之一，指男方正式送礼求婚。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统婚礼六礼之一，指男方正式送礼求婚。"
         },
         {
           "id": "activity-wenMing",
           "sourceKey": "yj.wenMing",
           "name": "问名",
           "short": "传统婚礼六礼之一，询问女方姓名、生辰等。",
-          "explanation": "黄历宜忌术语。“问名”指传统婚礼六礼之一，询问女方姓名、生辰等。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统婚礼六礼之一，询问女方姓名、生辰等。"
         },
         {
           "id": "activity-naXu",
           "sourceKey": "yj.naXu",
           "name": "纳婿",
           "short": "招赘女婿或办理入赘婚姻相关事项。",
-          "explanation": "黄历宜忌术语。“纳婿”指招赘女婿或办理入赘婚姻相关事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "招赘女婿或办理入赘婚姻相关事项。"
         },
         {
           "id": "activity-guiNing",
           "sourceKey": "yj.guiNing",
           "name": "归宁",
           "short": "已婚女子回娘家省亲。",
-          "explanation": "黄历宜忌术语。“归宁”指已婚女子回娘家省亲。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "已婚女子回娘家省亲。"
         },
         {
           "id": "activity-anChuang",
           "sourceKey": "yj.anChuang",
           "name": "安床",
           "short": "安置、移动或启用床位，传统上常指婚床或新居床位。",
-          "explanation": "黄历宜忌术语。“安床”指安置、移动或启用床位，传统上常指婚床或新居床位。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安置、移动或启用床位，传统上常指婚床或新居床位。"
         },
         {
           "id": "activity-heZhang",
           "sourceKey": "yj.heZhang",
           "name": "合帐",
           "short": "传统婚嫁中制作、安置床帐等事项。",
-          "explanation": "黄历宜忌术语。“合帐”指传统婚嫁中制作、安置床帐等事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统婚嫁中制作、安置床帐等事项。"
         },
         {
           "id": "activity-guanJi",
           "sourceKey": "yj.guanJi",
           "name": "冠笄",
           "short": "古代男子冠礼、女子笄礼等成年礼。",
-          "explanation": "黄历宜忌术语。“冠笄”指古代男子冠礼、女子笄礼等成年礼。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "古代男子冠礼、女子笄礼等成年礼。"
         },
         {
           "id": "activity-dingMeng",
           "sourceKey": "yj.dingMeng",
           "name": "订盟",
           "short": "订立婚约、盟约或正式约定。",
-          "explanation": "黄历宜忌术语。“订盟”指订立婚约、盟约或正式约定。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "订立婚约、盟约或正式约定。"
         },
         {
           "id": "activity-jinRenKou",
           "sourceKey": "yj.jinRenKou",
           "name": "进人口",
           "short": "传统上指收养、添丁或接纳新成员入户等事项。",
-          "explanation": "黄历宜忌术语。“进人口”指传统上指收养、添丁或接纳新成员入户等事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统上指收养、添丁或接纳新成员入户等事项。"
         },
         {
           "id": "activity-caiYi",
           "sourceKey": "yj.caiYi",
           "name": "裁衣",
           "short": "裁制衣服，传统黄历中常与婚礼、礼服等相关。",
-          "explanation": "黄历宜忌术语。“裁衣”指裁制衣服，传统黄历中常与婚礼、礼服等相关。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "裁制衣服，传统黄历中常与婚礼、礼服等相关。"
         },
         {
           "id": "activity-wanMian",
           "sourceKey": "yj.wanMian",
           "name": "挽面",
           "short": "传统美容习俗，以线等方式整理面部汗毛。",
-          "explanation": "黄历宜忌术语。“挽面”指传统美容习俗，以线等方式整理面部汗毛。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统美容习俗，以线等方式整理面部汗毛。"
         },
         {
           "id": "activity-kaiRong",
           "sourceKey": "yj.kaiRong",
           "name": "开容",
           "short": "传统美容、修整面容之事。",
-          "explanation": "黄历宜忌术语。“开容”指传统美容、修整面容之事。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统美容、修整面容之事。"
         },
         {
           "id": "activity-xiuFen",
           "sourceKey": "yj.xiuFen",
           "name": "修坟",
           "short": "修整、修葺坟墓。",
-          "explanation": "黄历宜忌术语。“修坟”指修整、修葺坟墓。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修整、修葺坟墓。"
         },
         {
           "id": "activity-qiZuan",
           "sourceKey": "yj.qiZuan",
           "name": "启钻",
           "short": "旧俗中开启暂厝之棺，准备迁葬或改葬。",
-          "explanation": "黄历宜忌术语。“启钻”指旧俗中开启暂厝之棺，准备迁葬或改葬。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "旧俗中开启暂厝之棺，准备迁葬或改葬。"
         },
         {
           "id": "activity-poTu",
           "sourceKey": "yj.poTu",
           "name": "破土",
           "short": "专指墓地、阴宅开始掘土施工。",
-          "explanation": "黄历宜忌术语。“破土”指专指墓地、阴宅开始掘土施工。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "专指墓地、阴宅开始掘土施工。"
         },
         {
           "id": "activity-anZang",
           "sourceKey": "yj.anZang",
           "name": "安葬",
           "short": "举行下葬、安置遗体或骨灰等丧葬事项。",
-          "explanation": "黄历宜忌术语。“安葬”指举行下葬、安置遗体或骨灰等丧葬事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "举行下葬、安置遗体或骨灰等丧葬事项。"
         },
         {
           "id": "activity-liBei",
           "sourceKey": "yj.liBei",
           "name": "立碑",
           "short": "树立墓碑、纪念碑等。",
-          "explanation": "黄历宜忌术语。“立碑”指树立墓碑、纪念碑等。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "树立墓碑、纪念碑等。"
         },
         {
           "id": "activity-chengFu",
           "sourceKey": "yj.chengFu",
           "name": "成服",
           "short": "丧礼中依礼制穿上相应丧服。",
-          "explanation": "黄历宜忌术语。“成服”指丧礼中依礼制穿上相应丧服。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "丧礼中依礼制穿上相应丧服。"
         },
         {
           "id": "activity-chuFu",
           "sourceKey": "yj.chuFu",
           "name": "除服",
           "short": "守丧期满后脱去丧服。",
-          "explanation": "黄历宜忌术语。“除服”指守丧期满后脱去丧服。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "守丧期满后脱去丧服。"
         },
         {
           "id": "activity-kaiShengFen",
           "sourceKey": "yj.kaiShengFen",
           "name": "开生坟",
           "short": "人在世时预先修建墓穴。",
-          "explanation": "黄历宜忌术语。“开生坟”指人在世时预先修建墓穴。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "人在世时预先修建墓穴。"
         },
         {
           "id": "activity-heShouMu",
           "sourceKey": "yj.heShouMu",
           "name": "合寿木",
           "short": "制作、合成寿木，即传统棺木。",
-          "explanation": "黄历宜忌术语。“合寿木”指制作、合成寿木，即传统棺木。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "制作、合成寿木，即传统棺木。"
         },
         {
           "id": "activity-ruLian",
           "sourceKey": "yj.ruLian",
           "name": "入殓",
           "short": "将逝者遗体安置入棺。",
-          "explanation": "黄历宜忌术语。“入殓”指将逝者遗体安置入棺。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "将逝者遗体安置入棺。"
         },
         {
           "id": "activity-yiJiu",
           "sourceKey": "yj.yiJiu",
           "name": "移柩",
           "short": "移动灵柩、棺柩。",
-          "explanation": "黄历宜忌术语。“移柩”指移动灵柩、棺柩。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "移动灵柩、棺柩。"
         },
         {
           "id": "activity-puDu",
           "sourceKey": "yj.puDu",
           "name": "普渡",
           "short": "举行超荐、祭祀亡灵等传统普渡仪式。",
-          "explanation": "黄历宜忌术语。“普渡”指举行超荐、祭祀亡灵等传统普渡仪式。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "举行超荐、祭祀亡灵等传统普渡仪式。"
         },
         {
           "id": "activity-ruZhai",
           "sourceKey": "yj.ruZhai",
           "name": "入宅",
           "short": "正式迁入新居、启用住宅。",
-          "explanation": "黄历宜忌术语。“入宅”指正式迁入新居、启用住宅。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "正式迁入新居、启用住宅。"
         },
         {
           "id": "activity-anXiang",
           "sourceKey": "yj.anXiang",
           "name": "安香",
           "short": "安置神位、香炉或祖先香火。",
-          "explanation": "黄历宜忌术语。“安香”指安置神位、香炉或祖先香火。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安置神位、香炉或祖先香火。"
         },
         {
           "id": "activity-anMen",
           "sourceKey": "yj.anMen",
           "name": "安门",
           "short": "安装、安置门户。",
-          "explanation": "黄历宜忌术语。“安门”指安装、安置门户。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安装、安置门户。"
         },
         {
           "id": "activity-xiuZao",
           "sourceKey": "yj.xiuZao",
           "name": "修造",
           "short": "修建、整修房屋或建筑设施。",
-          "explanation": "黄历宜忌术语。“修造”指修建、整修房屋或建筑设施。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修建、整修房屋或建筑设施。"
         },
         {
           "id": "activity-qiJi",
           "sourceKey": "yj.qiJi",
           "name": "起基",
           "short": "建筑工程开始打地基、立基础。",
-          "explanation": "黄历宜忌术语。“起基”指建筑工程开始打地基、立基础。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建筑工程开始打地基、立基础。"
         },
         {
           "id": "activity-dongTu",
           "sourceKey": "yj.dongTu",
           "name": "动土",
           "short": "建筑、修造等工程首次动工掘土。",
-          "explanation": "黄历宜忌术语。“动土”指建筑、修造等工程首次动工掘土。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建筑、修造等工程首次动工掘土。"
         },
         {
           "id": "activity-shangLiang",
           "sourceKey": "yj.shangLiang",
           "name": "上梁",
           "short": "建筑中安装屋顶主梁。",
-          "explanation": "黄历宜忌术语。“上梁”指建筑中安装屋顶主梁。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建筑中安装屋顶主梁。"
         },
         {
           "id": "activity-shuZhu",
           "sourceKey": "yj.shuZhu",
           "name": "竖柱",
           "short": "建筑工程中竖立柱子。",
-          "explanation": "黄历宜忌术语。“竖柱”指建筑工程中竖立柱子。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建筑工程中竖立柱子。"
         },
         {
           "id": "activity-kaiJing",
           "sourceKey": "yj.kaiJing",
           "name": "开井开池",
           "short": "开挖水井、水池。",
-          "explanation": "黄历宜忌术语。“开井开池”指开挖水井、水池。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开挖水井、水池。"
         },
         {
           "id": "activity-zuoBei",
           "sourceKey": "yj.zuoBei",
           "name": "作陂放水",
           "short": "修筑水塘、堤坝并引放水。",
-          "explanation": "黄历宜忌术语。“作陂放水”指修筑水塘、堤坝并引放水。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修筑水塘、堤坝并引放水。"
         },
         {
           "id": "activity-chaiXie",
           "sourceKey": "yj.chaiXie",
           "name": "拆卸",
           "short": "拆除建筑、构件或设备。",
-          "explanation": "黄历宜忌术语。“拆卸”指拆除建筑、构件或设备。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "拆除建筑、构件或设备。"
         },
         {
           "id": "activity-poWu",
           "sourceKey": "yj.poWu",
           "name": "破屋",
           "short": "拆毁旧屋。",
-          "explanation": "黄历宜忌术语。“破屋”指拆毁旧屋。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "拆毁旧屋。"
         },
         {
           "id": "activity-huaiYuan",
           "sourceKey": "yj.huaiYuan",
           "name": "坏垣",
           "short": "拆毁墙垣。",
-          "explanation": "黄历宜忌术语。“坏垣”指拆毁墙垣。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "拆毁墙垣。"
         },
         {
           "id": "activity-buYuan",
           "sourceKey": "yj.buYuan",
           "name": "补垣",
           "short": "修补墙垣。",
-          "explanation": "黄历宜忌术语。“补垣”指修补墙垣。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修补墙垣。"
         },
         {
           "id": "activity-faMuZuoLiang",
           "sourceKey": "yj.faMuZuoLiang",
           "name": "伐木做梁",
           "short": "砍伐木材并制作建筑梁材。",
-          "explanation": "黄历宜忌术语。“伐木做梁”指砍伐木材并制作建筑梁材。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "砍伐木材并制作建筑梁材。"
         },
         {
           "id": "activity-zuoZhao",
           "sourceKey": "yj.zuoZhao",
           "name": "作灶",
           "short": "建造、安装或改置炉灶。",
-          "explanation": "黄历宜忌术语。“作灶”指建造、安装或改置炉灶。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造、安装或改置炉灶。"
         },
         {
           "id": "activity-jieChu",
           "sourceKey": "yj.jieChu",
           "name": "解除",
           "short": "传统上指解除灾厄、禁忌或不利状态。",
-          "explanation": "黄历宜忌术语。“解除”指传统上指解除灾厄、禁忌或不利状态。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统上指解除灾厄、禁忌或不利状态。"
         },
         {
           "id": "activity-kaiZhuYan",
           "sourceKey": "yj.kaiZhuYan",
           "name": "开柱眼",
           "short": "传统建筑中在柱材上开孔、加工连接部位。",
-          "explanation": "黄历宜忌术语。“开柱眼”指传统建筑中在柱材上开孔、加工连接部位。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统建筑中在柱材上开孔、加工连接部位。"
         },
         {
           "id": "activity-chuanPing",
           "sourceKey": "yj.chuanPing",
           "name": "穿屏扇架",
           "short": "传统建筑中安装、制作屏扇框架等木作。",
-          "explanation": "黄历宜忌术语。“穿屏扇架”指传统建筑中安装、制作屏扇框架等木作。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统建筑中安装、制作屏扇框架等木作。"
         },
         {
           "id": "activity-gaiWuHeJi",
           "sourceKey": "yj.gaiWuHeJi",
           "name": "盖屋合脊",
           "short": "建屋并完成屋脊合拢。",
-          "explanation": "黄历宜忌术语。“盖屋合脊”指建屋并完成屋脊合拢。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建屋并完成屋脊合拢。"
         },
         {
           "id": "activity-kaiCe",
           "sourceKey": "yj.kaiCe",
           "name": "开厕",
           "short": "开设、挖建厕所位置。",
-          "explanation": "黄历宜忌术语。“开厕”指开设、挖建厕所位置。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开设、挖建厕所位置。"
         },
         {
           "id": "activity-zaoCang",
           "sourceKey": "yj.zaoCang",
           "name": "造仓",
           "short": "建造粮仓、仓房。",
-          "explanation": "黄历宜忌术语。“造仓”指建造粮仓、仓房。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造粮仓、仓房。"
         },
         {
           "id": "activity-saiXue",
           "sourceKey": "yj.saiXue",
           "name": "塞穴",
           "short": "堵塞洞穴、孔洞或缺口。",
-          "explanation": "黄历宜忌术语。“塞穴”指堵塞洞穴、孔洞或缺口。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "堵塞洞穴、孔洞或缺口。"
         },
         {
           "id": "activity-pingZhi",
           "sourceKey": "yj.pingZhi",
           "name": "平治道涂",
           "short": "修整、铺平道路。",
-          "explanation": "黄历宜忌术语。“平治道涂”指修整、铺平道路。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修整、铺平道路。"
         },
         {
           "id": "activity-zaoQiao",
           "sourceKey": "yj.zaoQiao",
           "name": "造桥",
           "short": "建造桥梁。",
-          "explanation": "黄历宜忌术语。“造桥”指建造桥梁。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造桥梁。"
         },
         {
           "id": "activity-zuoCe",
           "sourceKey": "yj.zuoCe",
           "name": "作厕",
           "short": "建造厕所。",
-          "explanation": "黄历宜忌术语。“作厕”指建造厕所。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造厕所。"
         },
         {
           "id": "activity-zhuDi",
           "sourceKey": "yj.zhuDi",
           "name": "筑堤",
           "short": "修筑堤坝。",
-          "explanation": "黄历宜忌术语。“筑堤”指修筑堤坝。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修筑堤坝。"
         },
         {
           "id": "activity-kaiChi",
           "sourceKey": "yj.kaiChi",
           "name": "开池",
           "short": "开挖水池。",
-          "explanation": "黄历宜忌术语。“开池”指开挖水池。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开挖水池。"
         },
         {
           "id": "activity-faMu",
           "sourceKey": "yj.faMu",
           "name": "伐木",
           "short": "砍伐树木。",
-          "explanation": "黄历宜忌术语。“伐木”指砍伐树木。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "砍伐树木。"
         },
         {
           "id": "activity-kaiQu",
           "sourceKey": "yj.kaiQu",
           "name": "开渠",
           "short": "开挖水渠。",
-          "explanation": "黄历宜忌术语。“开渠”指开挖水渠。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开挖水渠。"
         },
         {
           "id": "activity-jueJing",
           "sourceKey": "yj.jueJing",
           "name": "掘井",
           "short": "挖掘水井。",
-          "explanation": "黄历宜忌术语。“掘井”指挖掘水井。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "挖掘水井。"
         },
         {
           "id": "activity-saoShe",
           "sourceKey": "yj.saoShe",
           "name": "扫舍",
           "short": "清扫、整理住宅。",
-          "explanation": "黄历宜忌术语。“扫舍”指清扫、整理住宅。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "清扫、整理住宅。"
         },
         {
           "id": "activity-fangShui",
           "sourceKey": "yj.fangShui",
           "name": "放水",
           "short": "排水、引水或开启水路。",
-          "explanation": "黄历宜忌术语。“放水”指排水、引水或开启水路。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "排水、引水或开启水路。"
         },
         {
           "id": "activity-zaoWu",
           "sourceKey": "yj.zaoWu",
           "name": "造屋",
           "short": "建造房屋。",
-          "explanation": "黄历宜忌术语。“造屋”指建造房屋。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造房屋。"
         },
         {
           "id": "activity-heJi",
           "sourceKey": "yj.heJi",
           "name": "合脊",
           "short": "完成屋顶脊部的合拢工程。",
-          "explanation": "黄历宜忌术语。“合脊”指完成屋顶脊部的合拢工程。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "完成屋顶脊部的合拢工程。"
         },
         {
           "id": "activity-zaoChuChou",
           "sourceKey": "yj.zaoChuChou",
           "name": "造畜稠",
           "short": "建造牲畜圈舍；“畜稠”是旧式写法。",
-          "explanation": "黄历宜忌术语。“造畜稠”指建造牲畜圈舍；“畜稠”是旧式写法。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造牲畜圈舍；“畜稠”是旧式写法。"
         },
         {
           "id": "activity-xiuMen",
           "sourceKey": "yj.xiuMen",
           "name": "修门",
           "short": "修理或整修门户。",
-          "explanation": "黄历宜忌术语。“修门”指修理或整修门户。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修理或整修门户。"
         },
         {
           "id": "activity-dingSang",
           "sourceKey": "yj.dingSang",
           "name": "定磉",
           "short": "建筑中安放柱础石，为立柱作准备。",
-          "explanation": "黄历宜忌术语。“定磉”指建筑中安放柱础石，为立柱作准备。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建筑中安放柱础石，为立柱作准备。"
         },
         {
           "id": "activity-zuoLiang",
           "sourceKey": "yj.zuoLiang",
           "name": "作梁",
           "short": "制作建筑梁材。",
-          "explanation": "黄历宜忌术语。“作梁”指制作建筑梁材。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "制作建筑梁材。"
         },
         {
           "id": "activity-xiuShi",
           "sourceKey": "yj.xiuShi",
           "name": "修饰垣墙",
           "short": "粉饰、修整或修补墙垣。",
-          "explanation": "黄历宜忌术语。“修饰垣墙”指粉饰、修整或修补墙垣。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "粉饰、修整或修补墙垣。"
         },
         {
           "id": "activity-jiaMa",
           "sourceKey": "yj.jiaMa",
           "name": "架马",
           "short": "传统建筑木作中架设支撑构件等事项。",
-          "explanation": "黄历宜忌术语。“架马”指传统建筑木作中架设支撑构件等事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统建筑木作中架设支撑构件等事项。"
         },
         {
           "id": "activity-kaiShi",
           "sourceKey": "yj.kaiShi",
           "name": "开市",
           "short": "开业、开张或开始市场经营。",
-          "explanation": "黄历宜忌术语。“开市”指开业、开张或开始市场经营。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开业、开张或开始市场经营。"
         },
         {
           "id": "activity-guaBian",
           "sourceKey": "yj.guaBian",
           "name": "挂匾",
           "short": "悬挂招牌、匾额。",
-          "explanation": "黄历宜忌术语。“挂匾”指悬挂招牌、匾额。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "悬挂招牌、匾额。"
         },
         {
           "id": "activity-naChai",
           "sourceKey": "yj.naChai",
           "name": "纳财",
           "short": "收纳钱财、货款或取得财物。",
-          "explanation": "黄历宜忌术语。“纳财”指收纳钱财、货款或取得财物。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "收纳钱财、货款或取得财物。"
         },
         {
           "id": "activity-qiuCai",
           "sourceKey": "yj.qiuCai",
           "name": "求财",
           "short": "进行求取财利、谋求收益等活动。",
-          "explanation": "黄历宜忌术语。“求财”指进行求取财利、谋求收益等活动。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "进行求取财利、谋求收益等活动。"
         },
         {
           "id": "activity-kaiCang",
           "sourceKey": "yj.kaiCang",
           "name": "开仓",
           "short": "开启仓库、出入仓储货物。",
-          "explanation": "黄历宜忌术语。“开仓”指开启仓库、出入仓储货物。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开启仓库、出入仓储货物。"
         },
         {
           "id": "activity-maiChe",
           "sourceKey": "yj.maiChe",
           "name": "买车",
           "short": "购买车辆。",
-          "explanation": "黄历宜忌术语。“买车”指购买车辆。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "购买车辆。"
         },
         {
           "id": "activity-zhiChan",
           "sourceKey": "yj.zhiChan",
           "name": "置产",
           "short": "购买、取得房产、土地或其他产业。",
-          "explanation": "黄历宜忌术语。“置产”指购买、取得房产、土地或其他产业。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "购买、取得房产、土地或其他产业。"
         },
         {
           "id": "activity-guYong",
           "sourceKey": "yj.guYong",
           "name": "雇佣",
           "short": "聘请、雇用人员。",
-          "explanation": "黄历宜忌术语。“雇佣”指聘请、雇用人员。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "聘请、雇用人员。"
         },
         {
           "id": "activity-chuHuoCai",
           "sourceKey": "yj.chuHuoCai",
           "name": "出货财",
           "short": "发货、出售货物或将财货运出。",
-          "explanation": "黄历宜忌术语。“出货财”指发货、出售货物或将财货运出。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "发货、出售货物或将财货运出。"
         },
         {
           "id": "activity-anJiXie",
           "sourceKey": "yj.anJiXie",
           "name": "安机械",
           "short": "安装机械、器具。",
-          "explanation": "黄历宜忌术语。“安机械”指安装机械、器具。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安装机械、器具。"
         },
         {
           "id": "activity-zaoCheQi",
           "sourceKey": "yj.zaoCheQi",
           "name": "造车器",
           "short": "制造车辆或相关器具。",
-          "explanation": "黄历宜忌术语。“造车器”指制造车辆或相关器具。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "制造车辆或相关器具。"
         },
         {
           "id": "activity-jingLuo",
           "sourceKey": "yj.jingLuo",
           "name": "经络",
           "short": "旧时与纺织机具、织造经线等相关的事项。",
-          "explanation": "黄历宜忌术语。“经络”指旧时与纺织机具、织造经线等相关的事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "旧时与纺织机具、织造经线等相关的事项。"
         },
         {
           "id": "activity-yunNiang",
           "sourceKey": "yj.yunNiang",
           "name": "酝酿",
           "short": "酿造酒类或发酵制品。",
-          "explanation": "黄历宜忌术语。“酝酿”指酿造酒类或发酵制品。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "酿造酒类或发酵制品。"
         },
         {
           "id": "activity-zuoRan",
           "sourceKey": "yj.zuoRan",
           "name": "作染",
           "short": "进行染色、染织。",
-          "explanation": "黄历宜忌术语。“作染”指进行染色、染织。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "进行染色、染织。"
         },
         {
           "id": "activity-guZhu",
           "sourceKey": "yj.guZhu",
           "name": "鼓铸",
           "short": "冶炼、铸造金属器物。",
-          "explanation": "黄历宜忌术语。“鼓铸”指冶炼、铸造金属器物。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "冶炼、铸造金属器物。"
         },
         {
           "id": "activity-zaoChuan",
           "sourceKey": "yj.zaoChuan",
           "name": "造船",
           "short": "制造、修造船只。",
-          "explanation": "黄历宜忌术语。“造船”指制造、修造船只。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "制造、修造船只。"
         },
         {
           "id": "activity-geMi",
           "sourceKey": "yj.geMi",
           "name": "割蜜",
           "short": "采割蜂蜜。",
-          "explanation": "黄历宜忌术语。“割蜜”指采割蜂蜜。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "采割蜂蜜。"
         },
         {
           "id": "activity-zaiZhong",
           "sourceKey": "yj.zaiZhong",
           "name": "栽种",
           "short": "播种、种植植物或农作物。",
-          "explanation": "黄历宜忌术语。“栽种”指播种、种植植物或农作物。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "播种、种植植物或农作物。"
         },
         {
           "id": "activity-quYu",
           "sourceKey": "yj.quYu",
           "name": "取渔",
           "short": "捕鱼、取得水产。",
-          "explanation": "黄历宜忌术语。“取渔”指捕鱼、取得水产。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "捕鱼、取得水产。"
         },
         {
           "id": "activity-jieWang",
           "sourceKey": "yj.jieWang",
           "name": "结网",
           "short": "制作、编结渔网等网具。",
-          "explanation": "黄历宜忌术语。“结网”指制作、编结渔网等网具。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "制作、编结渔网等网具。"
         },
         {
           "id": "activity-muYang",
           "sourceKey": "yj.muYang",
           "name": "牧养",
           "short": "放牧、饲养牲畜。",
-          "explanation": "黄历宜忌术语。“牧养”指放牧、饲养牲畜。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "放牧、饲养牲畜。"
         },
         {
           "id": "activity-anDuiWei",
           "sourceKey": "yj.anDuiWei",
           "name": "安碓磑",
           "short": "安装舂米、磨谷等传统粮食加工器具。",
-          "explanation": "黄历宜忌术语。“安碓磑”指安装舂米、磨谷等传统粮食加工器具。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安装舂米、磨谷等传统粮食加工器具。"
         },
         {
           "id": "activity-xiYi",
           "sourceKey": "yj.xiYi",
           "name": "习艺",
           "short": "学习技艺、手艺。",
-          "explanation": "黄历宜忌术语。“习艺”指学习技艺、手艺。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "学习技艺、手艺。"
         },
         {
           "id": "activity-ruXue",
           "sourceKey": "yj.ruXue",
           "name": "入学",
           "short": "入学、拜师或开始学习。",
-          "explanation": "黄历宜忌术语。“入学”指入学、拜师或开始学习。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "入学、拜师或开始学习。"
         },
         {
           "id": "activity-liFa",
           "sourceKey": "yj.liFa",
           "name": "理发",
           "short": "修剪、整理头发。",
-          "explanation": "黄历宜忌术语。“理发”指修剪、整理头发。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修剪、整理头发。"
         },
         {
           "id": "activity-tanBing",
           "sourceKey": "yj.tanBing",
           "name": "探病",
           "short": "探望病人。",
-          "explanation": "黄历宜忌术语。“探病”指探望病人。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "探望病人。"
         },
         {
           "id": "activity-jianGui",
           "sourceKey": "yj.jianGui",
           "name": "见贵",
           "short": "拜见贵人、长官或重要人士。",
-          "explanation": "黄历宜忌术语。“见贵”指拜见贵人、长官或重要人士。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "拜见贵人、长官或重要人士。"
         },
         {
           "id": "activity-chengChuan",
           "sourceKey": "yj.chengChuan",
           "name": "乘船",
           "short": "乘坐船只出行。",
-          "explanation": "黄历宜忌术语。“乘船”指乘坐船只出行。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "乘坐船只出行。"
         },
         {
           "id": "activity-duShui",
           "sourceKey": "yj.duShui",
           "name": "渡水",
           "short": "渡河、过水。",
-          "explanation": "黄历宜忌术语。“渡水”指渡河、过水。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "渡河、过水。"
         },
         {
           "id": "activity-zhenJiu",
           "sourceKey": "yj.zhenJiu",
           "name": "针灸",
           "short": "进行针灸治疗。",
-          "explanation": "黄历宜忌术语。“针灸”指进行针灸治疗。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "进行针灸治疗。"
         },
         {
           "id": "activity-chuXing",
           "sourceKey": "yj.chuXing",
           "name": "出行",
           "short": "外出、旅行或远行。",
-          "explanation": "黄历宜忌术语。“出行”指外出、旅行或远行。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "外出、旅行或远行。"
         },
         {
           "id": "activity-yiXi",
           "sourceKey": "yj.yiXi",
           "name": "移徙",
           "short": "迁移居所、搬迁。",
-          "explanation": "黄历宜忌术语。“移徙”指迁移居所、搬迁。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "迁移居所、搬迁。"
         },
         {
           "id": "activity-fenJu",
           "sourceKey": "yj.fenJu",
           "name": "分居",
           "short": "分开居住、另立居所。",
-          "explanation": "黄历宜忌术语。“分居”指分开居住、另立居所。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "分开居住、另立居所。"
         },
         {
           "id": "activity-TiTou",
           "sourceKey": "yj.TiTou",
           "name": "剃头",
           "short": "剃发、剪发；旧黄历常与“理发”并列。",
-          "explanation": "黄历宜忌术语。“剃头”指剃发、剪发；旧黄历常与“理发”并列。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "剃发、剪发；旧黄历常与“理发”并列。"
         },
         {
           "id": "activity-zhengShou",
           "sourceKey": "yj.zhengShou",
           "name": "整手足甲",
           "short": "修剪、整理手足指甲。",
-          "explanation": "黄历宜忌术语。“整手足甲”指修剪、整理手足指甲。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "修剪、整理手足指甲。"
         },
         {
           "id": "activity-naChu",
           "sourceKey": "yj.naChu",
           "name": "纳畜",
           "short": "购入、接纳或饲养牲畜。",
-          "explanation": "黄历宜忌术语。“纳畜”指购入、接纳或饲养牲畜。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "购入、接纳或饲养牲畜。"
         },
         {
           "id": "activity-buZhuo",
           "sourceKey": "yj.buZhuo",
           "name": "捕捉",
           "short": "捕捉动物、害虫等。",
-          "explanation": "黄历宜忌术语。“捕捉”指捕捉动物、害虫等。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "捕捉动物、害虫等。"
         },
         {
           "id": "activity-tianLie",
           "sourceKey": "yj.tianLie",
           "name": "畋猎",
           "short": "狩猎。",
-          "explanation": "黄历宜忌术语。“畋猎”指狩猎。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "狩猎。"
         },
         {
           "id": "activity-jiaoNiuMa",
           "sourceKey": "yj.jiaoNiuMa",
           "name": "教牛马",
           "short": "训练、驯养牛马等牲畜。",
-          "explanation": "黄历宜忌术语。“教牛马”指训练、驯养牛马等牲畜。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "训练、驯养牛马等牲畜。"
         },
         {
           "id": "activity-huiQinYou",
           "sourceKey": "yj.huiQinYou",
           "name": "会亲友",
           "short": "与亲属、朋友聚会或拜访。",
-          "explanation": "黄历宜忌术语。“会亲友”指与亲属、朋友聚会或拜访。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "与亲属、朋友聚会或拜访。"
         },
         {
           "id": "activity-fuRen",
           "sourceKey": "yj.fuRen",
           "name": "赴任",
           "short": "前往就任官职或新职位。",
-          "explanation": "黄历宜忌术语。“赴任”指前往就任官职或新职位。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "前往就任官职或新职位。"
         },
         {
           "id": "activity-qiuYi",
           "sourceKey": "yj.qiuYi",
           "name": "求医",
           "short": "寻医、就诊。",
-          "explanation": "黄历宜忌术语。“求医”指寻医、就诊。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "寻医、就诊。"
         },
         {
           "id": "activity-zhiBing",
           "sourceKey": "yj.zhiBing",
           "name": "治病",
           "short": "接受治疗、医治疾病。",
-          "explanation": "黄历宜忌术语。“治病”指接受治疗、医治疾病。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "接受治疗、医治疾病。"
         },
         {
           "id": "activity-ciSong",
           "sourceKey": "yj.ciSong",
           "name": "词讼",
           "short": "诉讼、打官司或处理法律争议。",
-          "explanation": "黄历宜忌术语。“词讼”指诉讼、打官司或处理法律争议。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "诉讼、打官司或处理法律争议。"
         },
         {
           "id": "activity-qiJiDongTu",
           "sourceKey": "yj.qiJiDongTu",
           "name": "起基动土",
           "short": "开始建筑基础并正式动工。",
-          "explanation": "黄历宜忌术语。“起基动土”指开始建筑基础并正式动工。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "开始建筑基础并正式动工。"
         },
         {
           "id": "activity-poWuHuaiYuan",
           "sourceKey": "yj.poWuHuaiYuan",
           "name": "破屋坏垣",
           "short": "拆毁旧屋、墙垣。",
-          "explanation": "黄历宜忌术语。“破屋坏垣”指拆毁旧屋、墙垣。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "拆毁旧屋、墙垣。"
         },
         {
           "id": "activity-gaiWu",
           "sourceKey": "yj.gaiWu",
           "name": "盖屋",
           "short": "建造、盖房。",
-          "explanation": "黄历宜忌术语。“盖屋”指建造、盖房。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造、盖房。"
         },
         {
           "id": "activity-zaoCangKu",
           "sourceKey": "yj.zaoCangKu",
           "name": "造仓库",
           "short": "建造仓库。",
-          "explanation": "黄历宜忌术语。“造仓库”指建造仓库。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "建造仓库。"
         },
         {
           "id": "activity-liQuanJiaoYi",
           "sourceKey": "yj.liQuanJiaoYi",
           "name": "立券交易",
           "short": "订立契约并进行交易。",
-          "explanation": "黄历宜忌术语。“立券交易”指订立契约并进行交易。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "订立契约并进行交易。"
         },
         {
           "id": "activity-jiaoYi",
           "sourceKey": "yj.jiaoYi",
           "name": "交易",
           "short": "买卖、交换财货。",
-          "explanation": "黄历宜忌术语。“交易”指买卖、交换财货。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "买卖、交换财货。"
         },
         {
           "id": "activity-liQuan",
           "sourceKey": "yj.liQuan",
           "name": "立券",
           "short": "订立契约、票据或书面凭证。",
-          "explanation": "黄历宜忌术语。“立券”指订立契约、票据或书面凭证。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "订立契约、票据或书面凭证。"
         },
         {
           "id": "activity-anJi",
           "sourceKey": "yj.anJi",
           "name": "安机",
           "short": "安装机具、设备。",
-          "explanation": "黄历宜忌术语。“安机”指安装机具、设备。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "安装机具、设备。"
         },
         {
           "id": "activity-huiYou",
           "sourceKey": "yj.huiYou",
           "name": "会友",
           "short": "会见朋友。",
-          "explanation": "黄历宜忌术语。“会友”指会见朋友。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "会见朋友。"
         },
         {
           "id": "activity-qiuYiLiaoBing",
           "sourceKey": "yj.qiuYiLiaoBing",
           "name": "求医疗病",
           "short": "求医并进行治疗。",
-          "explanation": "黄历宜忌术语。“求医疗病”指求医并进行治疗。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "求医并进行治疗。"
         },
         {
           "id": "activity-zhuShi",
           "sourceKey": "yj.zhuShi",
           "name": "诸事不宜",
           "short": "表示传统黄历认为当天不宜安排重要事项。",
-          "explanation": "黄历宜忌术语。“诸事不宜”指表示传统黄历认为当天不宜安排重要事项。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "表示传统黄历认为当天不宜安排重要事项。"
         },
         {
           "id": "activity-yuShi",
           "sourceKey": "yj.yuShi",
           "name": "馀事勿取",
           "short": "除已列事项外，其余事情不宜特别安排。",
-          "explanation": "黄历宜忌术语。“馀事勿取”指除已列事项外，其余事情不宜特别安排。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "除已列事项外，其余事情不宜特别安排。"
         },
         {
           "id": "activity-xingSang",
           "sourceKey": "yj.xingSang",
           "name": "行丧",
           "short": "办理丧事、送葬等丧礼活动。",
-          "explanation": "黄历宜忌术语。“行丧”指办理丧事、送葬等丧礼活动。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "办理丧事、送葬等丧礼活动。"
         },
         {
           "id": "activity-duanYi",
           "sourceKey": "yj.duanYi",
           "name": "断蚁",
           "short": "传统术语，指处理、清除蚁害。",
-          "explanation": "黄历宜忌术语。“断蚁”指传统术语，指处理、清除蚁害。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "传统术语，指处理、清除蚁害。"
         },
         {
           "id": "activity-guiXiu",
           "sourceKey": "yj.guiXiu",
           "name": "归岫",
           "short": "古旧黄历术语，字面有归返山岫之意；现代黄历中较少使用。",
-          "explanation": "黄历宜忌术语。“归岫”指古旧黄历术语，字面有归返山岫之意；现代黄历中较少使用。它用于传统择日语境，表示某日是否适合进行这一类事项；不同历书的宜忌结果可能不同。"
+          "explanation": "古旧黄历术语，字面有归返山岫之意；现代黄历中较少使用。"
         }
       ]
     },
     {
       "id": "chong-sha",
       "name": "冲煞",
-      "summary": "“冲”常表示地支之间的相冲关系；“煞”在黄历中常配合方向使用，如“煞北”。",
+      "summary": "“冲”说明当日地支与哪个生肖地支相冲；“煞”说明传统上需要避忌的方位。",
       "terms": [
         {
           "id": "chong",
@@ -1118,7 +1118,7 @@
     {
       "id": "taishen",
       "name": "胎神",
-      "summary": "胎神是传统民俗与黄历中的观念，常以每日所在位置的形式记录。",
+      "summary": "胎神占方是黄历中的传统民俗记录，表示每日所记的胎神位置。",
       "terms": [
         {
           "id": "taishen",
@@ -1127,7 +1127,7 @@
             "胎神占方"
           ],
           "short": "传统黄历中记录的每日胎神所在位置。",
-          "explanation": "传统民俗认为胎神与孕育、胎儿相关，黄历因此会记载每日“胎神占方”。常见文字会包含房屋部位、器物和内外方位，例如“厨灶炉外正南”。现代阅读时可把它理解为一种传统文化记录。",
+          "explanation": "胎神是传统民俗中与孕育、胎儿相关的神祇观念。黄历每天会记一处“胎神占方”，主要作为传统文化记录阅读。",
           "examples": [
             "厨灶炉外正南",
             "仓库床外西北"
@@ -1137,99 +1137,99 @@
           "id": "taishen-position",
           "name": "胎神占方",
           "short": "描述胎神所在位置的传统格式。",
-          "explanation": "胎神占方通常由“器物或位置 + 内外 + 方位”组成。不同历书的用字可能略有差异，因此解释时应保留原始词组，同时分解说明每个部分。"
+          "explanation": "胎神占方通常把位置、器物、屋内外和方向组合在一起。例如“厨灶炉外正南”可读作：厨灶、炉灶相关位置，位于屋外正南方向。"
         }
       ]
     },
     {
       "id": "zhixing",
       "name": "十二值星",
-      "summary": "又称十二建星，以建、除、满、平、定、执、破、危、成、收、开、闭循环标记每日。",
+      "summary": "十二值星又称建除十二神，以建、除、满、平、定、执、破、危、成、收、开、闭十二字循环值日。",
       "terms": [
         {
           "id": "jian",
           "name": "建",
-          "short": "建立、开始之意。",
-          "explanation": "十二值星之一。传统解释多与建立、开始有关。实际宜忌仍需结合具体黄历体系阅读。"
+          "short": "“建”取建立、开端之意。",
+          "explanation": "“建”取建立、开端之意，传统上偏向开始、设立、出行等性质的事情，但并非表示所有事情都吉。"
         },
         {
           "id": "chu",
           "name": "除",
-          "short": "除旧、清理之意。",
-          "explanation": "十二值星之一。传统解释多与清除、整理、除旧有关。"
+          "short": "“除”取除旧、清理之意。",
+          "explanation": "“除”取除旧、清理之意，传统上偏向清洁、解除、整理、疗治等性质的事情。"
         },
         {
           "id": "man",
           "name": "满",
-          "short": "充满、圆满之意。",
-          "explanation": "十二值星之一。传统解释多与充足、圆满、聚集有关。"
+          "short": "“满”取充盈、圆满之意。",
+          "explanation": "“满”取充盈、圆满之意，传统上偏向聚集、庆贺、充实之事；过满也有不宜再增之意。"
         },
         {
           "id": "ping",
           "name": "平",
-          "short": "平稳、平常之意。",
-          "explanation": "十二值星之一。传统解释多取平稳、平衡之意。"
+          "short": "“平”取平稳、平衡之意。",
+          "explanation": "“平”取平稳、平衡之意，传统上用于较平常、调和、修整一类事项。"
         },
         {
           "id": "ding",
           "name": "定",
-          "short": "稳定、确定之意。",
-          "explanation": "十二值星之一。传统解释多与稳定、确定、安定有关。"
+          "short": "“定”取安定、确定之意。",
+          "explanation": "“定”取安定、确定之意，传统上偏向约定、安置、稳定关系或位置的事项。"
         },
         {
           "id": "zhi",
           "name": "执",
-          "short": "执持、守成之意。",
-          "explanation": "十二值星之一。传统解释多与坚持、执行、持守有关。"
+          "short": "“执”取执持、守成之意。",
+          "explanation": "“执”取执持、守成之意，传统上偏向执行、坚持、守成，也有不宜轻易变动之意。"
         },
         {
           "id": "po",
           "name": "破",
-          "short": "破除、破损之意。",
-          "explanation": "十二值星之一。传统解释多与破除、拆解、结束旧事有关。"
+          "short": "“破”取破除、破坏之意。",
+          "explanation": "“破”取破除、破坏之意，传统上偏向拆除、破旧、解除旧局；通常不用于庆典性质的大事。"
         },
         {
           "id": "wei",
           "name": "危",
-          "short": "警惕、谨慎之意。",
-          "explanation": "十二值星之一。传统解释多提醒谨慎，不宜仅凭名称判断所有事项吉凶。"
+          "short": "“危”有高、险、需谨慎之意。",
+          "explanation": "“危”有高、险、需谨慎之意，传统上提醒处理重要事务时多加审慎，并非单纯等于“大凶”。"
         },
         {
           "id": "cheng",
           "name": "成",
-          "short": "完成、成就之意。",
-          "explanation": "十二值星之一。传统解释多与完成、成就、达成有关。"
+          "short": "“成”取完成、成就之意。",
+          "explanation": "“成”取完成、成就之意，传统上偏向完成、达成、成婚、开业等带有成果性质的事项。"
         },
         {
           "id": "shou",
           "name": "收",
-          "short": "收纳、收成之意。",
-          "explanation": "十二值星之一。传统解释多与收取、收成、结束并归纳有关。"
+          "short": "“收”取收纳、收成之意。",
+          "explanation": "“收”取收纳、收成之意，传统上偏向收取、收藏、纳财以及事情收尾。"
         },
         {
           "id": "kai",
           "name": "开",
-          "short": "开启、开放之意。",
-          "explanation": "十二值星之一。传统解释多与开启、开始、开放有关。"
+          "short": "“开”取开启、开放之意。",
+          "explanation": "“开”取开启、开放之意，传统上偏向开业、出行、求事、启用等开始性质的事项。"
         },
         {
           "id": "bi",
           "name": "闭",
-          "short": "关闭、收束之意。",
-          "explanation": "十二值星之一。传统解释多与关闭、收束、静守有关。"
+          "short": "“闭”取关闭、收束之意。",
+          "explanation": "“闭”取关闭、收束之意，传统上偏向收藏、封闭、休整，不强调向外开展新事。"
         }
       ]
     },
     {
       "id": "gods-directions",
       "name": "吉神方位",
-      "summary": "万年历常显示喜神、财神、福神等传统神祇的当日方位。",
+      "summary": "黄历按传统规则列出喜神、财神、福神当天所在方向。",
       "terms": [
         {
           "id": "xishen",
           "name": "喜神",
           "short": "传统择日中象征喜庆、吉庆的神祇方位。",
-          "explanation": "黄历常按日干等传统规则列出喜神所在方向。其用途属于传统民俗与择日文化。",
+          "explanation": "喜神象征喜庆、欢乐与吉庆。黄历中的“喜神方位”按当日日干推定，例如显示“东北”，即传统上把东北作为当天的喜神方向。",
           "related": [
             "caishen",
             "fushen"
@@ -1239,7 +1239,7 @@
           "id": "caishen",
           "name": "财神",
           "short": "传统文化中与财富、财运相关的神祇方位。",
-          "explanation": "黄历中的“财神方位”是按照传统历法规则推得的每日方向，与民间祭祀财神的文化概念相关。",
+          "explanation": "财神象征财富与财运。黄历中的“财神方位”是按传统历法规则推得的每日方向，用于民俗择日与祭财神文化。",
           "related": [
             "xishen",
             "fushen"
@@ -1249,7 +1249,7 @@
           "id": "fushen",
           "name": "福神",
           "short": "传统文化中象征福气、福运的神祇方位。",
-          "explanation": "黄历常把福神与喜神、财神一起列出，表示当日传统上对应的方位。",
+          "explanation": "福神象征福气与福运。黄历会按传统规则列出每日福神方位，常与喜神、财神方位一起显示。",
           "related": [
             "xishen",
             "caishen"
@@ -1258,1435 +1258,124 @@
       ]
     },
     {
-      "id": "shensha",
-      "name": "吉神宜趋 / 凶煞宜忌",
-      "summary": "解释万年历每日列出的传统吉神与凶煞名称。",
-      "terms": [
-        {
-          "id": "shensha-qingLong",
-          "sourceKey": "sn.qingLong",
-          "name": "青龙",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“青龙”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-baiHu",
-          "sourceKey": "sn.baiHu",
-          "name": "白虎",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“白虎”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-zhuQue",
-          "sourceKey": "sn.zhuQue",
-          "name": "朱雀",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“朱雀”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xuanWu",
-          "sourceKey": "sn.xuanWu",
-          "name": "玄武",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“玄武”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-mingTang",
-          "sourceKey": "sn.mingTang",
-          "name": "明堂",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“明堂”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianXing",
-          "sourceKey": "sn.tianXing",
-          "name": "天刑",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天刑”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianDe",
-          "sourceKey": "sn.tianDe",
-          "name": "天德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jinKui",
-          "sourceKey": "sn.jinKui",
-          "name": "金匮",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“金匮”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yuTang",
-          "sourceKey": "sn.yuTang",
-          "name": "玉堂",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“玉堂”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-siMing",
-          "sourceKey": "sn.siMing",
-          "name": "司命",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“司命”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianLao",
-          "sourceKey": "sn.tianLao",
-          "name": "天牢",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天牢”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-gouChen",
-          "sourceKey": "sn.gouChen",
-          "name": "勾陈",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“勾陈”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianEn",
-          "sourceKey": "sn.tianEn",
-          "name": "天恩",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天恩”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-muCang",
-          "sourceKey": "sn.muCang",
-          "name": "母仓",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“母仓”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-shiYang",
-          "sourceKey": "sn.shiYang",
-          "name": "时阳",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“时阳”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-shengQi",
-          "sourceKey": "sn.shengQi",
-          "name": "生气",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“生气”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yiHou",
-          "sourceKey": "sn.yiHou",
-          "name": "益后",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“益后”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-zaiSha",
-          "sourceKey": "sn.zaiSha",
-          "name": "灾煞",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“灾煞”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianHuo",
-          "sourceKey": "sn.tianHuo",
-          "name": "天火",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天火”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-siJi",
-          "sourceKey": "sn.siJi",
-          "name": "四忌",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“四忌”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-baLong",
-          "sourceKey": "sn.baLong",
-          "name": "八龙",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“八龙”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-fuRi",
-          "sourceKey": "sn.fuRi",
-          "name": "复日",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“复日”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xuShi",
-          "sourceKey": "sn.xuShi",
-          "name": "续世",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“续世”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yueSha",
-          "sourceKey": "sn.yueSha",
-          "name": "月煞",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“月煞”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yueXu",
-          "sourceKey": "sn.yueXu",
-          "name": "月虚",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“月虚”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xueZhi",
-          "sourceKey": "sn.xueZhi",
-          "name": "血支",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“血支”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianZei",
-          "sourceKey": "sn.tianZei",
-          "name": "天贼",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天贼”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-wuXu",
-          "sourceKey": "sn.wuXu",
-          "name": "五虚",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“五虚”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tuFu",
-          "sourceKey": "sn.tuFu",
-          "name": "土符",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“土符”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-guiJi",
-          "sourceKey": "sn.guiJi",
-          "name": "归忌",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“归忌”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xueJi",
-          "sourceKey": "sn.xueJi",
-          "name": "血忌",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“血忌”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yueDe",
-          "sourceKey": "sn.yueDe",
-          "name": "月德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“月德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yueEn",
-          "sourceKey": "sn.yueEn",
-          "name": "月恩",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“月恩”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-siXiang",
-          "sourceKey": "sn.siXiang",
-          "name": "四相",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“四相”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-wangRi",
-          "sourceKey": "sn.wangRi",
-          "name": "王日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“王日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianCang",
-          "sourceKey": "sn.tianCang",
-          "name": "天仓",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天仓”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-buJiang",
-          "sourceKey": "sn.buJiang",
-          "name": "不将",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“不将”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-wuHe",
-          "sourceKey": "sn.wuHe",
-          "name": "五合",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“五合”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-mingFeiDui",
-          "sourceKey": "sn.mingFeiDui",
-          "name": "鸣吠对",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“鸣吠对”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yueJian",
-          "sourceKey": "sn.yueJian",
-          "name": "月建",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“月建”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xiaoShi",
-          "sourceKey": "sn.xiaoShi",
-          "name": "小时",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“小时”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tuHu",
-          "sourceKey": "sn.tuHu",
-          "name": "土府",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“土府”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-wangWang",
-          "sourceKey": "sn.wangWang",
-          "name": "往亡",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“往亡”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yaoAn",
-          "sourceKey": "sn.yaoAn",
-          "name": "要安",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“要安”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-siShen",
-          "sourceKey": "sn.siShen",
-          "name": "死神",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“死神”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-tianMa",
-          "sourceKey": "sn.tianMa",
-          "name": "天马",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天马”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jiuHu",
-          "sourceKey": "sn.jiuHu",
-          "name": "九虎",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“九虎”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-qiNiao",
-          "sourceKey": "sn.qiNiao",
-          "name": "七鸟",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“七鸟”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-liuShe",
-          "sourceKey": "sn.liuShe",
-          "name": "六蛇",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“六蛇”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-guanRi",
-          "sourceKey": "sn.guanRi",
-          "name": "官日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“官日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jiQi",
-          "sourceKey": "sn.jiQi",
-          "name": "吉期",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“吉期”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yuYu",
-          "sourceKey": "sn.yuYu",
-          "name": "玉宇",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“玉宇”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-daShi",
-          "sourceKey": "sn.daShi",
-          "name": "大时",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“大时”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-daBai",
-          "sourceKey": "sn.daBai",
-          "name": "大败",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“大败”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xianChi",
-          "sourceKey": "sn.xianChi",
-          "name": "咸池",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“咸池”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-shouRi",
-          "sourceKey": "sn.shouRi",
-          "name": "守日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“守日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianWu",
-          "sourceKey": "sn.tianWu",
-          "name": "天巫",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天巫”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-fuDe",
-          "sourceKey": "sn.fuDe",
-          "name": "福德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“福德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-liuYi",
-          "sourceKey": "sn.liuYi",
-          "name": "六仪",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“六仪”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jinTang",
-          "sourceKey": "sn.jinTang",
-          "name": "金堂",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“金堂”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yanDui",
-          "sourceKey": "sn.yanDui",
-          "name": "厌对",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“厌对”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-zhaoYao",
-          "sourceKey": "sn.zhaoYao",
-          "name": "招摇",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“招摇”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-jiuKong",
-          "sourceKey": "sn.jiuKong",
-          "name": "九空",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“九空”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-jiuKan",
-          "sourceKey": "sn.jiuKan",
-          "name": "九坎",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“九坎”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-jiuJiao",
-          "sourceKey": "sn.jiuJiao",
-          "name": "九焦",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“九焦”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-xiangRi",
-          "sourceKey": "sn.xiangRi",
-          "name": "相日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“相日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-baoGuang",
-          "sourceKey": "sn.baoGuang",
-          "name": "宝光",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“宝光”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianGang",
-          "sourceKey": "sn.tianGang",
-          "name": "天罡",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“天罡”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yueXing",
-          "sourceKey": "sn.yueXing",
-          "name": "月刑",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“月刑”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yueHai",
-          "sourceKey": "sn.yueHai",
-          "name": "月害",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“月害”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-youHuo",
-          "sourceKey": "sn.youHuo",
-          "name": "游祸",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“游祸”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-chongRi",
-          "sourceKey": "sn.chongRi",
-          "name": "重日",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“重日”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-shiDe",
-          "sourceKey": "sn.shiDe",
-          "name": "时德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“时德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-minRi",
-          "sourceKey": "sn.minRi",
-          "name": "民日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“民日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-sanHe",
-          "sourceKey": "sn.sanHe",
-          "name": "三合",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“三合”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-linRi",
-          "sourceKey": "sn.linRi",
-          "name": "临日",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“临日”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-shiYin",
-          "sourceKey": "sn.shiYin",
-          "name": "时阴",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“时阴”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-mingFei",
-          "sourceKey": "sn.mingFei",
-          "name": "鸣吠",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“鸣吠”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-siQi",
-          "sourceKey": "sn.siQi",
-          "name": "死气",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“死气”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-diNang",
-          "sourceKey": "sn.diNang",
-          "name": "地囊",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“地囊”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yueDeHe",
-          "sourceKey": "sn.yueDeHe",
-          "name": "月德合",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“月德合”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jingAn",
-          "sourceKey": "sn.jingAn",
-          "name": "敬安",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“敬安”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-puHu",
-          "sourceKey": "sn.puHu",
-          "name": "普护",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“普护”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-jieShen",
-          "sourceKey": "sn.jieShen",
-          "name": "解神",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“解神”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-xiaoHao",
-          "sourceKey": "sn.xiaoHao",
-          "name": "小耗",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“小耗”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-tianDeHe",
-          "sourceKey": "sn.tianDeHe",
-          "name": "天德合",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天德合”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yueKong",
-          "sourceKey": "sn.yueKong",
-          "name": "月空",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“月空”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yiMa",
-          "sourceKey": "sn.yiMa",
-          "name": "驿马",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“驿马”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianHou",
-          "sourceKey": "sn.tianHou",
-          "name": "天后",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天后”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-chuShen",
-          "sourceKey": "sn.chuShen",
-          "name": "除神",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“除神”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yuePo",
-          "sourceKey": "sn.yuePo",
-          "name": "月破",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“月破”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-daHao",
-          "sourceKey": "sn.daHao",
-          "name": "大耗",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“大耗”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-wuLi",
-          "sourceKey": "sn.wuLi",
-          "name": "五离",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“五离”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yinDe",
-          "sourceKey": "sn.yinDe",
-          "name": "阴德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“阴德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-fuSheng",
-          "sourceKey": "sn.fuSheng",
-          "name": "福生",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“福生”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianLi",
-          "sourceKey": "sn.tianLi",
-          "name": "天吏",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“天吏”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-zhiSi",
-          "sourceKey": "sn.zhiSi",
-          "name": "致死",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“致死”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yuanWu",
-          "sourceKey": "sn.yuanWu",
-          "name": "元武",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“元武”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yangDe",
-          "sourceKey": "sn.yangDe",
-          "name": "阳德",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“阳德”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianXi",
-          "sourceKey": "sn.tianXi",
-          "name": "天喜",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天喜”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-tianYi",
-          "sourceKey": "sn.tianYi",
-          "name": "天医",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天医”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-yueYan",
-          "sourceKey": "sn.yueYan",
-          "name": "月厌",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“月厌”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-diHuo",
-          "sourceKey": "sn.diHuo",
-          "name": "地火",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“地火”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-fourHit",
-          "sourceKey": "sn.fourHit",
-          "name": "四击",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“四击”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-daSha",
-          "sourceKey": "sn.daSha",
-          "name": "大煞",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“大煞”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-daHui",
-          "sourceKey": "sn.daHui",
-          "name": "大会",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“大会”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianYuan",
-          "sourceKey": "sn.tianYuan",
-          "name": "天愿",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天愿”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-liuHe",
-          "sourceKey": "sn.liuHe",
-          "name": "六合",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“六合”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-wuFu",
-          "sourceKey": "sn.wuFu",
-          "name": "五富",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“五富”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-shengXin",
-          "sourceKey": "sn.shengXin",
-          "name": "圣心",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“圣心”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-heKui",
-          "sourceKey": "sn.heKui",
-          "name": "河魁",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“河魁”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-jieSha",
-          "sourceKey": "sn.jieSha",
-          "name": "劫煞",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“劫煞”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-siQiong",
-          "sourceKey": "sn.siQiong",
-          "name": "四穷",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“四穷”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-chuShuiLong",
-          "sourceKey": "sn.chuShuiLong",
-          "name": "触水龙",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“触水龙”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-baFeng",
-          "sourceKey": "sn.baFeng",
-          "name": "八风",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“八风”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianShe",
-          "sourceKey": "sn.tianShe",
-          "name": "天赦",
-          "short": "传统黄历中的吉神名称。",
-          "explanation": "“天赦”是传统黄历神煞体系中的吉神术语。它会随日期组合出现在“吉神宜趋”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "吉神"
-        },
-        {
-          "id": "shensha-wuMu",
-          "sourceKey": "sn.wuMu",
-          "name": "五墓",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“五墓”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-baZhuan",
-          "sourceKey": "sn.baZhuan",
-          "name": "八专",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“八专”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yinCuo",
-          "sourceKey": "sn.yinCuo",
-          "name": "阴错",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“阴错”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-siHao",
-          "sourceKey": "sn.siHao",
-          "name": "四耗",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“四耗”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yangCuo",
-          "sourceKey": "sn.yangCuo",
-          "name": "阳错",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“阳错”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-siFei",
-          "sourceKey": "sn.siFei",
-          "name": "四废",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“四废”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-sanYin",
-          "sourceKey": "sn.sanYin",
-          "name": "三阴",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“三阴”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-xiaoHui",
-          "sourceKey": "sn.xiaoHui",
-          "name": "小会",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“小会”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yinDaoChongYang",
-          "sourceKey": "sn.yinDaoChongYang",
-          "name": "阴道冲阳",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阴道冲阳”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-danYin",
-          "sourceKey": "sn.danYin",
-          "name": "单阴",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“单阴”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-guChen",
-          "sourceKey": "sn.guChen",
-          "name": "孤辰",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“孤辰”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yinWei",
-          "sourceKey": "sn.yinWei",
-          "name": "阴位",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阴位”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xingHen",
-          "sourceKey": "sn.xingHen",
-          "name": "行狠",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“行狠”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-liaoLi",
-          "sourceKey": "sn.liaoLi",
-          "name": "了戾",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“了戾”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-jueYin",
-          "sourceKey": "sn.jueYin",
-          "name": "绝阴",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“绝阴”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-chunYang",
-          "sourceKey": "sn.chunYang",
-          "name": "纯阳",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“纯阳”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-suiBo",
-          "sourceKey": "sn.suiBo",
-          "name": "岁薄",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“岁薄”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yinYangJiaoPo",
-          "sourceKey": "sn.yinYangJiaoPo",
-          "name": "阴阳交破",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阴阳交破”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yinYangJuCuo",
-          "sourceKey": "sn.yinYangJuCuo",
-          "name": "阴阳俱错",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阴阳俱错”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yinYangJiChong",
-          "sourceKey": "sn.yinYangJiChong",
-          "name": "阴阳击冲",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阴阳击冲”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-zhuZhen",
-          "sourceKey": "sn.zhuZhen",
-          "name": "逐阵",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“逐阵”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yangCuoYinChong",
-          "sourceKey": "sn.yangCuoYinChong",
-          "name": "阳错阴冲",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阳错阴冲”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-qiFu",
-          "sourceKey": "sn.qiFu",
-          "name": "七符",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“七符”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianGou",
-          "sourceKey": "sn.tianGou",
-          "name": "天狗",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“天狗”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-chengRi",
-          "sourceKey": "sn.chengRi",
-          "name": "成日",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“成日”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianFu",
-          "sourceKey": "sn.tianFu",
-          "name": "天符",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“天符”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-guYang",
-          "sourceKey": "sn.guYang",
-          "name": "孤阳",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“孤阳”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-jueYang",
-          "sourceKey": "sn.jueYang",
-          "name": "绝阳",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“绝阳”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-chunYin",
-          "sourceKey": "sn.chunYin",
-          "name": "纯阴",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“纯阴”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-yinShen",
-          "sourceKey": "sn.yinShen",
-          "name": "阴神",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“阴神”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-jieChu",
-          "sourceKey": "sn.jieChu",
-          "name": "解除",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“解除”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-yangPoYinChong",
-          "sourceKey": "sn.yangPoYinChong",
-          "name": "阳破阴冲",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“阳破阴冲”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-sanSang",
-          "sourceKey": "sn.sanSang",
-          "name": "三丧",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“三丧”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-guiKu",
-          "sourceKey": "sn.guiKu",
-          "name": "鬼哭",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“鬼哭”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-daTui",
-          "sourceKey": "sn.daTui",
-          "name": "大退",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“大退”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-siLi",
-          "sourceKey": "sn.siLi",
-          "name": "四离",
-          "short": "传统黄历中的凶煞名称。",
-          "explanation": "“四离”是传统黄历神煞体系中的凶煞术语。它会随日期组合出现在“凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "凶煞"
-        },
-        {
-          "id": "shensha-qingLong",
-          "sourceKey": "sn.qingLong",
-          "name": "Azure Dragon",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Azure Dragon”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-baiHu",
-          "sourceKey": "sn.baiHu",
-          "name": "White Tiger",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“White Tiger”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-zhuQue",
-          "sourceKey": "sn.zhuQue",
-          "name": "Rosefinch",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Rosefinch”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-xuanWu",
-          "sourceKey": "sn.xuanWu",
-          "name": "Black Tortoise",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Black Tortoise”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianEn",
-          "sourceKey": "sn.tianEn",
-          "name": "Serene Grace",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Serene Grace”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-siShen",
-          "sourceKey": "sn.siShen",
-          "name": "Death",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Death”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-tianMa",
-          "sourceKey": "sn.tianMa",
-          "name": "Pegasus",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Pegasus”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-baLong",
-          "sourceKey": "sn.baLong",
-          "name": "Eight Dragon",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Eight Dragon”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-jiuHu",
-          "sourceKey": "sn.jiuHu",
-          "name": "Nine Tiger",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Nine Tiger”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-qiNiao",
-          "sourceKey": "sn.qiNiao",
-          "name": "Seven Bird",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Seven Bird”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        },
-        {
-          "id": "shensha-liuShe",
-          "sourceKey": "sn.liuShe",
-          "name": "Six Snake",
-          "short": "传统黄历中的神煞名称。",
-          "explanation": "“Six Snake”是传统黄历神煞体系中的神煞术语。它会随日期组合出现在“吉神宜趋 / 凶煞宜忌”等栏目中。不同历书与流派对具体含义、宜忌侧重点可能有所差异，因此本项目以识别与解释术语为主，不把它当作现代科学判断。",
-          "kind": "神煞"
-        }
-      ]
-    },
-    {
       "id": "tianshen",
       "name": "值日天神",
-      "summary": "十二天神、黄道黑道与传统吉凶。",
+      "summary": "十二值日天神轮流值日，并分为六个黄道神与六个黑道神；这是传统择日中的一层判断。",
       "terms": [
         {
           "id": "tianshen",
           "name": "值日天神",
-          "short": "每日轮值的十二天神。",
-          "explanation": "传统黄历以十二天神轮值来辅助判断当日属性，并配合黄道、黑道以及吉凶显示。"
+          "short": "十二值日天神依次为青龙、明堂、天刑、朱雀、金匮、天德、白虎、玉堂、天牢、玄武、司命、勾陈。",
+          "explanation": "十二值日天神依次为青龙、明堂、天刑、朱雀、金匮、天德、白虎、玉堂、天牢、玄武、司命、勾陈。传统上其中六神归黄道、六神归黑道。"
         },
         {
           "id": "huangdao",
           "name": "黄道",
-          "short": "传统黄历中较偏吉的值日类型。",
-          "explanation": "“黄道”是十二天神系统中的传统分类之一，通常配合吉神、宜忌等信息一起阅读，不应单独作为现实决策依据。"
+          "short": "在十二值日天神体系中，青龙、明堂、金匮、天德、玉堂、司命归为黄道，传统上视为较吉的一类值日。",
+          "explanation": "在十二值日天神体系中，青龙、明堂、金匮、天德、玉堂、司命归为黄道，传统上视为较吉的一类值日。"
         },
         {
           "id": "heidao",
           "name": "黑道",
-          "short": "传统黄历中较偏凶的值日类型。",
-          "explanation": "“黑道”是十二天神系统中的传统分类之一，通常配合凶煞、宜忌等信息一起阅读。"
+          "short": "在十二值日天神体系中，天刑、朱雀、白虎、天牢、玄武、勾陈归为黑道，传统上视为较需谨慎的一类值日。",
+          "explanation": "在十二值日天神体系中，天刑、朱雀、白虎、天牢、玄武、勾陈归为黑道，传统上视为较需谨慎的一类值日。"
         },
         {
           "id": "luck-ji",
           "name": "吉",
-          "short": "传统黄历中的吉类标记。",
-          "explanation": "表示该值日天神在传统分类中属“吉”。"
+          "short": "这里的“吉”表示该值日天神在传统黄黑道分类中属较吉的一类，不代表现实中所有事情都会顺利。",
+          "explanation": "这里的“吉”表示该值日天神在传统黄黑道分类中属较吉的一类，不代表现实中所有事情都会顺利。"
         },
         {
           "id": "luck-xiong",
           "name": "凶",
-          "short": "传统黄历中的凶类标记。",
-          "explanation": "表示该值日天神在传统分类中属“凶”。"
+          "short": "这里的“凶”表示该值日天神在传统黄黑道分类中属较需避忌的一类，不代表现实中必然发生坏事。",
+          "explanation": "这里的“凶”表示该值日天神在传统黄黑道分类中属较需避忌的一类，不代表现实中必然发生坏事。"
         },
         {
           "id": "tianshen-0",
           "name": "青龙",
-          "short": "十二值日天神之一：青龙。",
-          "explanation": "“青龙”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "青龙属黄道六神之一。",
+          "explanation": "青龙属黄道六神之一。传统上象征喜庆、吉祥与顺遂，常被视为较适合开展事务的值日。"
         },
         {
           "id": "tianshen-1",
           "name": "明堂",
-          "short": "十二值日天神之一：明堂。",
-          "explanation": "“明堂”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "明堂属黄道六神之一。",
+          "explanation": "明堂属黄道六神之一。传统上有光明、贵人辅弼之意，常被视为较利于会见、商议和办理事务。"
         },
         {
           "id": "tianshen-2",
           "name": "天刑",
-          "short": "十二值日天神之一：天刑。",
-          "explanation": "“天刑”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "天刑属黑道六神之一。",
+          "explanation": "天刑属黑道六神之一。传统上与刑罚、争议、约束之象相联系，因此多强调谨慎处理争执或重要事务。"
         },
         {
           "id": "tianshen-3",
           "name": "朱雀",
-          "short": "十二值日天神之一：朱雀。",
-          "explanation": "“朱雀”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "朱雀属黑道六神之一。",
+          "explanation": "朱雀属黑道六神之一。传统上常与口舌、言语争执之象相联系，因此多提醒谨慎沟通。"
         },
         {
           "id": "tianshen-4",
           "name": "金匮",
-          "short": "十二值日天神之一：金匮。",
-          "explanation": "“金匮”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "金匮属黄道六神之一。",
+          "explanation": "金匮属黄道六神之一。“匮”有收藏、库藏之意，传统上常与财帛、积聚、收藏等吉意相联系。"
         },
         {
           "id": "tianshen-5",
           "name": "天德",
-          "short": "十二值日天神之一：天德。",
-          "explanation": "“天德”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "天德属黄道六神之一。",
+          "explanation": "天德属黄道六神之一。传统上以德泽、和顺、化解不利为其象征，因此通常归为吉值。"
         },
         {
           "id": "tianshen-6",
           "name": "白虎",
-          "short": "十二值日天神之一：白虎。",
-          "explanation": "“白虎”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "白虎属黑道六神之一。",
+          "explanation": "白虎属黑道六神之一。传统上常与惊扰、伤损、风险之象相联系，因此值日时强调谨慎。"
         },
         {
           "id": "tianshen-7",
           "name": "玉堂",
-          "short": "十二值日天神之一：玉堂。",
-          "explanation": "“玉堂”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "玉堂属黄道六神之一。",
+          "explanation": "玉堂属黄道六神之一。传统上象征文雅、贵气、和顺，常归入较吉的值日类型。"
         },
         {
           "id": "tianshen-8",
           "name": "天牢",
-          "short": "十二值日天神之一：天牢。",
-          "explanation": "“天牢”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "天牢属黑道六神之一。",
+          "explanation": "天牢属黑道六神之一。“牢”有拘束、困滞之象，传统上多用于提醒事务可能受阻或宜谨慎。"
         },
         {
           "id": "tianshen-9",
           "name": "玄武",
-          "short": "十二值日天神之一：玄武。",
-          "explanation": "“玄武”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "玄武属黑道六神之一。",
+          "explanation": "玄武属黑道六神之一。传统择日语境中常与隐伏、盗失、暗中阻碍等象征相联系。"
         },
         {
           "id": "tianshen-10",
           "name": "司命",
-          "short": "十二值日天神之一：司命。",
-          "explanation": "“司命”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "司命属黄道六神之一。",
+          "explanation": "司命属黄道六神之一。传统上有掌管生命、事务秩序之象，通常被列为较吉的值日。"
         },
         {
           "id": "tianshen-11",
           "name": "勾陈",
-          "short": "十二值日天神之一：勾陈。",
-          "explanation": "“勾陈”是传统黄历十二值日天神之一。万年历会同时显示它所属的黄道/黑道类型与传统吉凶。"
+          "short": "勾陈属黑道六神之一。",
+          "explanation": "勾陈属黑道六神之一。传统上常取牵连、迟滞、反复之象，因此多强调谨慎处理复杂事务。"
         }
       ]
     },
     {
       "id": "pengzu",
       "name": "彭祖百忌",
-      "summary": "解释万年历显示的日干、日支传统禁忌口诀。",
+      "summary": "彭祖百忌由十条天干忌与十二条地支忌组成；黄历每天各取当日日干、日支对应的一条。",
       "terms": [
         {
           "id": "pengzu",
           "name": "彭祖百忌",
           "short": "按日干、日支组合显示的传统禁忌语。",
-          "explanation": "彭祖百忌是传统历书中的日干、日支禁忌口诀。万年历通常各取一条干忌与一条支忌组合显示；属于传统民俗资料。"
+          "explanation": "彭祖百忌是传统历书中的禁忌歌诀，共十条天干忌和十二条地支忌。每天按当日天干、地支各取一条，所以万年历通常会同时显示两句。"
         },
         {
           "id": "pengzu-gan-甲",
@@ -2694,8 +1383,8 @@
           "aliases": [
             "甲日百忌"
           ],
-          "short": "甲日的传统干忌。",
-          "explanation": "“甲不开仓财物耗散”是彭祖百忌中的日干口诀，表示传统历书对甲日所列的避忌。"
+          "short": "传统歌诀认为甲日不宜开仓取用或放出财物，“财物耗散”是对此禁忌的民俗警语。",
+          "explanation": "传统歌诀认为甲日不宜开仓取用或放出财物，“财物耗散”是对此禁忌的民俗警语。"
         },
         {
           "id": "pengzu-gan-乙",
@@ -2703,8 +1392,8 @@
           "aliases": [
             "乙日百忌"
           ],
-          "short": "乙日的传统干忌。",
-          "explanation": "“乙不栽植千株不长”是彭祖百忌中的日干口诀，表示传统历书对乙日所列的避忌。"
+          "short": "传统歌诀认为乙日不宜栽种植物，“千株不长”用来强调栽植不利的象征。",
+          "explanation": "传统歌诀认为乙日不宜栽种植物，“千株不长”用来强调栽植不利的象征。"
         },
         {
           "id": "pengzu-gan-丙",
@@ -2712,8 +1401,8 @@
           "aliases": [
             "丙日百忌"
           ],
-          "short": "丙日的传统干忌。",
-          "explanation": "“丙不修灶必见灾殃”是彭祖百忌中的日干口诀，表示传统历书对丙日所列的避忌。"
+          "short": "传统歌诀认为丙日不宜新建或修理炉灶，“灾殃”是旧时用于加强避忌意味的说法。",
+          "explanation": "传统歌诀认为丙日不宜新建或修理炉灶，“灾殃”是旧时用于加强避忌意味的说法。"
         },
         {
           "id": "pengzu-gan-丁",
@@ -2721,8 +1410,8 @@
           "aliases": [
             "丁日百忌"
           ],
-          "short": "丁日的传统干忌。",
-          "explanation": "“丁不剃头头必生疮”是彭祖百忌中的日干口诀，表示传统历书对丁日所列的避忌。"
+          "short": "传统歌诀认为丁日不宜剃头或理发，“头必生疮”属于旧时民俗警语。",
+          "explanation": "传统歌诀认为丁日不宜剃头或理发，“头必生疮”属于旧时民俗警语。"
         },
         {
           "id": "pengzu-gan-戊",
@@ -2730,8 +1419,8 @@
           "aliases": [
             "戊日百忌"
           ],
-          "short": "戊日的传统干忌。",
-          "explanation": "“戊不受田田主不祥”是彭祖百忌中的日干口诀，表示传统历书对戊日所列的避忌。"
+          "short": "传统歌诀认为戊日不宜接受、购置田产。",
+          "explanation": "传统歌诀认为戊日不宜接受、购置田产。“受田”在旧时主要指承受或取得田地。"
         },
         {
           "id": "pengzu-gan-己",
@@ -2739,8 +1428,8 @@
           "aliases": [
             "己日百忌"
           ],
-          "short": "己日的传统干忌。",
-          "explanation": "“己不破券二比并亡”是彭祖百忌中的日干口诀，表示传统历书对己日所列的避忌。"
+          "short": "传统歌诀认为己日不宜毁券、破契或处理某些契券财务事项。",
+          "explanation": "传统歌诀认为己日不宜毁券、破契或处理某些契券财务事项；“破券”与旧时契约、票券有关。"
         },
         {
           "id": "pengzu-gan-庚",
@@ -2748,8 +1437,8 @@
           "aliases": [
             "庚日百忌"
           ],
-          "short": "庚日的传统干忌。",
-          "explanation": "“庚不经络织机虚张”是彭祖百忌中的日干口诀，表示传统历书对庚日所列的避忌。"
+          "short": "传统歌诀认为庚日不宜进行经纬纺织等工作。",
+          "explanation": "传统歌诀认为庚日不宜进行经纬纺织等工作；“经络”在这里指织造中的经线、络线，不是中医经络。"
         },
         {
           "id": "pengzu-gan-辛",
@@ -2757,8 +1446,8 @@
           "aliases": [
             "辛日百忌"
           ],
-          "short": "辛日的传统干忌。",
-          "explanation": "“辛不合酱主人不尝”是彭祖百忌中的日干口诀，表示传统历书对辛日所列的避忌。"
+          "short": "传统歌诀认为辛日不宜制酱、调酱或进行相关发酵制作。",
+          "explanation": "传统歌诀认为辛日不宜制酱、调酱或进行相关发酵制作。“主人不尝”是旧时避忌警语。"
         },
         {
           "id": "pengzu-gan-壬",
@@ -2766,8 +1455,8 @@
           "aliases": [
             "壬日百忌"
           ],
-          "short": "壬日的传统干忌。",
-          "explanation": "“壬不泱水更难提防”是彭祖百忌中的日干口诀，表示传统历书对壬日所列的避忌。"
+          "short": "传统歌诀认为壬日不宜进行放水、决水等水务操作，强调水事需谨慎。",
+          "explanation": "传统歌诀认为壬日不宜进行放水、决水等水务操作，强调水事需谨慎。不同版本也常写作“壬不决水”。"
         },
         {
           "id": "pengzu-gan-癸",
@@ -2775,8 +1464,8 @@
           "aliases": [
             "癸日百忌"
           ],
-          "short": "癸日的传统干忌。",
-          "explanation": "“癸不词讼理弱敌强”是彭祖百忌中的日干口诀，表示传统历书对癸日所列的避忌。"
+          "short": "传统歌诀认为癸日不宜兴讼、打官司。",
+          "explanation": "传统歌诀认为癸日不宜兴讼、打官司；“词讼”即诉讼、争讼。"
         },
         {
           "id": "pengzu-zhi-子",
@@ -2784,8 +1473,8 @@
           "aliases": [
             "子日百忌"
           ],
-          "short": "子日的传统支忌。",
-          "explanation": "“子不问卜自惹祸殃”是彭祖百忌中的日支口诀，表示传统历书对子日所列的避忌。"
+          "short": "传统歌诀认为子日不宜问卜、占问，后半句是用于加强禁忌意味的旧式警语。",
+          "explanation": "传统歌诀认为子日不宜问卜、占问，后半句是用于加强禁忌意味的旧式警语。"
         },
         {
           "id": "pengzu-zhi-丑",
@@ -2793,8 +1482,8 @@
           "aliases": [
             "丑日百忌"
           ],
-          "short": "丑日的传统支忌。",
-          "explanation": "“丑不冠带主不还乡”是彭祖百忌中的日支口诀，表示传统历书对丑日所列的避忌。"
+          "short": "传统歌诀认为丑日不宜举行冠带等礼仪。",
+          "explanation": "传统歌诀认为丑日不宜举行冠带等礼仪。“冠带”可指成年礼服饰或正式整冠束带之事。"
         },
         {
           "id": "pengzu-zhi-寅",
@@ -2802,8 +1491,8 @@
           "aliases": [
             "寅日百忌"
           ],
-          "short": "寅日的传统支忌。",
-          "explanation": "“寅不祭祀神鬼不尝”是彭祖百忌中的日支口诀，表示传统历书对寅日所列的避忌。"
+          "short": "传统歌诀认为寅日不宜祭祀，“神鬼不尝”是旧时表示祭祀不被享用的象征说法。",
+          "explanation": "传统歌诀认为寅日不宜祭祀，“神鬼不尝”是旧时表示祭祀不被享用的象征说法。"
         },
         {
           "id": "pengzu-zhi-卯",
@@ -2811,8 +1500,8 @@
           "aliases": [
             "卯日百忌"
           ],
-          "short": "卯日的传统支忌。",
-          "explanation": "“卯不穿井水泉不香”是彭祖百忌中的日支口诀，表示传统历书对卯日所列的避忌。"
+          "short": "传统歌诀认为卯日不宜开凿水井。",
+          "explanation": "传统歌诀认为卯日不宜开凿水井；“穿井”就是掘井、打井。"
         },
         {
           "id": "pengzu-zhi-辰",
@@ -2820,8 +1509,8 @@
           "aliases": [
             "辰日百忌"
           ],
-          "short": "辰日的传统支忌。",
-          "explanation": "“辰不哭泣必主重丧”是彭祖百忌中的日支口诀，表示传统历书对辰日所列的避忌。"
+          "short": "传统歌诀认为辰日忌哭泣，“重丧”属于旧时丧葬禁忌语，不宜按现代因果理解。",
+          "explanation": "传统歌诀认为辰日忌哭泣，“重丧”属于旧时丧葬禁忌语，不宜按现代因果理解。"
         },
         {
           "id": "pengzu-zhi-巳",
@@ -2829,8 +1518,8 @@
           "aliases": [
             "巳日百忌"
           ],
-          "short": "巳日的传统支忌。",
-          "explanation": "“巳不远行财物伏藏”是彭祖百忌中的日支口诀，表示传统历书对巳日所列的避忌。"
+          "short": "传统歌诀认为巳日不宜远行，后半句以财物难显、受藏作传统警语。",
+          "explanation": "传统歌诀认为巳日不宜远行，后半句以财物难显、受藏作传统警语。"
         },
         {
           "id": "pengzu-zhi-午",
@@ -2838,8 +1527,8 @@
           "aliases": [
             "午日百忌"
           ],
-          "short": "午日的传统支忌。",
-          "explanation": "“午不苫盖屋主更张”是彭祖百忌中的日支口诀，表示传统历书对午日所列的避忌。"
+          "short": "传统歌诀认为午日不宜苫盖、修盖屋顶。",
+          "explanation": "传统歌诀认为午日不宜苫盖、修盖屋顶。“苫盖”指用草席、瓦材等覆盖房屋。"
         },
         {
           "id": "pengzu-zhi-未",
@@ -2847,8 +1536,8 @@
           "aliases": [
             "未日百忌"
           ],
-          "short": "未日的传统支忌。",
-          "explanation": "“未不服药毒气入肠”是彭祖百忌中的日支口诀，表示传统历书对未日所列的避忌。"
+          "short": "传统歌诀认为未日忌服药。",
+          "explanation": "传统歌诀认为未日忌服药；这是古代民俗禁忌，现代用药应遵循医生、药师和药品说明。"
         },
         {
           "id": "pengzu-zhi-申",
@@ -2856,8 +1545,8 @@
           "aliases": [
             "申日百忌"
           ],
-          "short": "申日的传统支忌。",
-          "explanation": "“申不安床鬼祟入房”是彭祖百忌中的日支口诀，表示传统历书对申日所列的避忌。"
+          "short": "传统歌诀认为申日不宜安床，即安置、移动或启用床位。",
+          "explanation": "传统歌诀认为申日不宜安床，即安置、移动或启用床位；后半句为民俗警语。"
         },
         {
           "id": "pengzu-zhi-酉",
@@ -2865,8 +1554,8 @@
           "aliases": [
             "酉日百忌"
           ],
-          "short": "酉日的传统支忌。",
-          "explanation": "“酉不会客醉坐颠狂”是彭祖百忌中的日支口诀，表示传统历书对酉日所列的避忌。"
+          "short": "传统歌诀认为酉日不宜会客宴饮，后半句以醉乱之象强调避忌。",
+          "explanation": "传统歌诀认为酉日不宜会客宴饮，后半句以醉乱之象强调避忌。"
         },
         {
           "id": "pengzu-zhi-戌",
@@ -2874,8 +1563,8 @@
           "aliases": [
             "戌日百忌"
           ],
-          "short": "戌日的传统支忌。",
-          "explanation": "“戌不吃犬作怪上床”是彭祖百忌中的日支口诀，表示传统历书对戌日所列的避忌。"
+          "short": "传统歌诀认为戌日忌食犬肉，属于旧时饮食与生肖象征相关的民俗禁忌。",
+          "explanation": "传统歌诀认为戌日忌食犬肉，属于旧时饮食与生肖象征相关的民俗禁忌。"
         },
         {
           "id": "pengzu-zhi-亥",
@@ -2883,674 +1572,66 @@
           "aliases": [
             "亥日百忌"
           ],
-          "short": "亥日的传统支忌。",
-          "explanation": "“亥不嫁娶不利新郎”是彭祖百忌中的日支口诀，表示传统历书对亥日所列的避忌。"
+          "short": "传统歌诀认为亥日不宜嫁娶，后半句是旧时婚嫁禁忌语。",
+          "explanation": "传统歌诀认为亥日不宜嫁娶，后半句是旧时婚嫁禁忌语。"
         }
       ]
     },
     {
-      "id": "bazi-basic",
-      "name": "八字基础",
-      "summary": "解释年柱、月柱、日柱、时柱与干支结构。",
-      "terms": [
-        {
-          "id": "bazi",
-          "name": "八字",
-          "short": "由年柱、月柱、日柱、时柱共八个干支字组成。",
-          "explanation": "八字又称四柱，以出生或所选时刻的年、月、日、时分别配成天干地支，共四柱八字。万年历显示结构资料，不等同于完整命理判断。"
-        },
-        {
-          "id": "year-pillar",
-          "name": "年柱",
-          "short": "四柱中的年干支。",
-          "explanation": "年柱由年干与年支组成，用来表示该时刻所属的干支纪年。"
-        },
-        {
-          "id": "month-pillar",
-          "name": "月柱",
-          "short": "四柱中的月干支。",
-          "explanation": "月柱由月干与月支组成，传统四柱排法通常以节气划分月份。"
-        },
-        {
-          "id": "day-pillar",
-          "name": "日柱",
-          "short": "四柱中的日干支。",
-          "explanation": "日柱由日干与日支组成，是六十甲子日序的一部分。"
-        },
-        {
-          "id": "time-pillar",
-          "name": "时柱",
-          "short": "四柱中的时干支。",
-          "explanation": "时柱由时干与时支组成，时支以十二时辰划分。"
-        },
-        {
-          "id": "tiangan",
-          "name": "天干",
-          "short": "甲乙丙丁戊己庚辛壬癸。",
-          "explanation": "十天干用于传统干支纪年、纪月、纪日、纪时，并与十二地支组合成六十甲子。"
-        },
-        {
-          "id": "dizhi",
-          "name": "地支",
-          "short": "子丑寅卯辰巳午未申酉戌亥。",
-          "explanation": "十二地支用于干支纪时，并与生肖、十二时辰等传统体系相联系。"
-        }
-      ]
+      "id": "tiangan-dizhi",
+      "name": "天干地支",
+      "summary": "十天干、十二地支及六十甲子属于完整体系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
     },
     {
-      "id": "jieqi",
-      "name": "二十四节气",
-      "summary": "解释万年历所显示的节气名称。",
-      "terms": [
-        {
-          "id": "jieqi",
-          "name": "二十四节气",
-          "short": "依据太阳周年运动划分的二十四个时令节点。",
-          "explanation": "二十四节气用于反映季节、物候和传统农事节律。万年历显示当前或相邻节气。"
-        },
-        {
-          "id": "jieqi-0",
-          "name": "立春",
-          "short": "二十四节气之一：立春。",
-          "explanation": "“立春”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-1",
-          "name": "雨水",
-          "short": "二十四节气之一：雨水。",
-          "explanation": "“雨水”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-2",
-          "name": "惊蛰",
-          "short": "二十四节气之一：惊蛰。",
-          "explanation": "“惊蛰”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-3",
-          "name": "春分",
-          "short": "二十四节气之一：春分。",
-          "explanation": "“春分”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-4",
-          "name": "清明",
-          "short": "二十四节气之一：清明。",
-          "explanation": "“清明”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-5",
-          "name": "谷雨",
-          "short": "二十四节气之一：谷雨。",
-          "explanation": "“谷雨”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-6",
-          "name": "立夏",
-          "short": "二十四节气之一：立夏。",
-          "explanation": "“立夏”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-7",
-          "name": "小满",
-          "short": "二十四节气之一：小满。",
-          "explanation": "“小满”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-8",
-          "name": "芒种",
-          "short": "二十四节气之一：芒种。",
-          "explanation": "“芒种”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-9",
-          "name": "夏至",
-          "short": "二十四节气之一：夏至。",
-          "explanation": "“夏至”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-10",
-          "name": "小暑",
-          "short": "二十四节气之一：小暑。",
-          "explanation": "“小暑”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-11",
-          "name": "大暑",
-          "short": "二十四节气之一：大暑。",
-          "explanation": "“大暑”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-12",
-          "name": "立秋",
-          "short": "二十四节气之一：立秋。",
-          "explanation": "“立秋”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-13",
-          "name": "处暑",
-          "short": "二十四节气之一：处暑。",
-          "explanation": "“处暑”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-14",
-          "name": "白露",
-          "short": "二十四节气之一：白露。",
-          "explanation": "“白露”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-15",
-          "name": "秋分",
-          "short": "二十四节气之一：秋分。",
-          "explanation": "“秋分”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-16",
-          "name": "寒露",
-          "short": "二十四节气之一：寒露。",
-          "explanation": "“寒露”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-17",
-          "name": "霜降",
-          "short": "二十四节气之一：霜降。",
-          "explanation": "“霜降”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-18",
-          "name": "立冬",
-          "short": "二十四节气之一：立冬。",
-          "explanation": "“立冬”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-19",
-          "name": "小雪",
-          "short": "二十四节气之一：小雪。",
-          "explanation": "“小雪”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-20",
-          "name": "大雪",
-          "short": "二十四节气之一：大雪。",
-          "explanation": "“大雪”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-21",
-          "name": "冬至",
-          "short": "二十四节气之一：冬至。",
-          "explanation": "“冬至”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-22",
-          "name": "小寒",
-          "short": "二十四节气之一：小寒。",
-          "explanation": "“小寒”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        },
-        {
-          "id": "jieqi-23",
-          "name": "大寒",
-          "short": "二十四节气之一：大寒。",
-          "explanation": "“大寒”是二十四节气之一，用于表示太阳周年运动中的一个时令节点，并对应传统季节与物候变化。"
-        }
-      ]
+      "id": "bazi-reference",
+      "name": "八字",
+      "summary": "四柱八字涉及排盘与干支关系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
     },
     {
-      "id": "xiu28",
-      "name": "二十八星宿",
-      "summary": "解释万年历每日所显示的星宿。",
-      "terms": [
-        {
-          "id": "xiu28",
-          "name": "二十八星宿",
-          "short": "传统天文学把黄道附近星区分成二十八宿。",
-          "explanation": "二十八星宿是中国传统天文学的重要分区体系，按东方青龙、北方玄武、西方白虎、南方朱雀分为四组。黄历也常为每日配一宿。"
-        },
-        {
-          "id": "xiu-0",
-          "name": "角",
-          "aliases": [
-            "角宿"
-          ],
-          "short": "二十八星宿之一：角宿。",
-          "explanation": "“角宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-1",
-          "name": "亢",
-          "aliases": [
-            "亢宿"
-          ],
-          "short": "二十八星宿之一：亢宿。",
-          "explanation": "“亢宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-2",
-          "name": "氐",
-          "aliases": [
-            "氐宿"
-          ],
-          "short": "二十八星宿之一：氐宿。",
-          "explanation": "“氐宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-3",
-          "name": "房",
-          "aliases": [
-            "房宿"
-          ],
-          "short": "二十八星宿之一：房宿。",
-          "explanation": "“房宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-4",
-          "name": "心",
-          "aliases": [
-            "心宿"
-          ],
-          "short": "二十八星宿之一：心宿。",
-          "explanation": "“心宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-5",
-          "name": "尾",
-          "aliases": [
-            "尾宿"
-          ],
-          "short": "二十八星宿之一：尾宿。",
-          "explanation": "“尾宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-6",
-          "name": "箕",
-          "aliases": [
-            "箕宿"
-          ],
-          "short": "二十八星宿之一：箕宿。",
-          "explanation": "“箕宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-7",
-          "name": "斗",
-          "aliases": [
-            "斗宿"
-          ],
-          "short": "二十八星宿之一：斗宿。",
-          "explanation": "“斗宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-8",
-          "name": "牛",
-          "aliases": [
-            "牛宿"
-          ],
-          "short": "二十八星宿之一：牛宿。",
-          "explanation": "“牛宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-9",
-          "name": "女",
-          "aliases": [
-            "女宿"
-          ],
-          "short": "二十八星宿之一：女宿。",
-          "explanation": "“女宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-10",
-          "name": "虚",
-          "aliases": [
-            "虚宿"
-          ],
-          "short": "二十八星宿之一：虚宿。",
-          "explanation": "“虚宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-11",
-          "name": "危",
-          "aliases": [
-            "危宿"
-          ],
-          "short": "二十八星宿之一：危宿。",
-          "explanation": "“危宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-12",
-          "name": "室",
-          "aliases": [
-            "室宿"
-          ],
-          "short": "二十八星宿之一：室宿。",
-          "explanation": "“室宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-13",
-          "name": "壁",
-          "aliases": [
-            "壁宿"
-          ],
-          "short": "二十八星宿之一：壁宿。",
-          "explanation": "“壁宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-14",
-          "name": "奎",
-          "aliases": [
-            "奎宿"
-          ],
-          "short": "二十八星宿之一：奎宿。",
-          "explanation": "“奎宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-15",
-          "name": "娄",
-          "aliases": [
-            "娄宿"
-          ],
-          "short": "二十八星宿之一：娄宿。",
-          "explanation": "“娄宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-16",
-          "name": "胃",
-          "aliases": [
-            "胃宿"
-          ],
-          "short": "二十八星宿之一：胃宿。",
-          "explanation": "“胃宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-17",
-          "name": "昴",
-          "aliases": [
-            "昴宿"
-          ],
-          "short": "二十八星宿之一：昴宿。",
-          "explanation": "“昴宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-18",
-          "name": "毕",
-          "aliases": [
-            "毕宿"
-          ],
-          "short": "二十八星宿之一：毕宿。",
-          "explanation": "“毕宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-19",
-          "name": "觜",
-          "aliases": [
-            "觜宿"
-          ],
-          "short": "二十八星宿之一：觜宿。",
-          "explanation": "“觜宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-20",
-          "name": "参",
-          "aliases": [
-            "参宿"
-          ],
-          "short": "二十八星宿之一：参宿。",
-          "explanation": "“参宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-21",
-          "name": "井",
-          "aliases": [
-            "井宿"
-          ],
-          "short": "二十八星宿之一：井宿。",
-          "explanation": "“井宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-22",
-          "name": "鬼",
-          "aliases": [
-            "鬼宿"
-          ],
-          "short": "二十八星宿之一：鬼宿。",
-          "explanation": "“鬼宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-23",
-          "name": "柳",
-          "aliases": [
-            "柳宿"
-          ],
-          "short": "二十八星宿之一：柳宿。",
-          "explanation": "“柳宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-24",
-          "name": "星",
-          "aliases": [
-            "星宿"
-          ],
-          "short": "二十八星宿之一：星宿。",
-          "explanation": "“星宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-25",
-          "name": "张",
-          "aliases": [
-            "张宿"
-          ],
-          "short": "二十八星宿之一：张宿。",
-          "explanation": "“张宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-26",
-          "name": "翼",
-          "aliases": [
-            "翼宿"
-          ],
-          "short": "二十八星宿之一：翼宿。",
-          "explanation": "“翼宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        },
-        {
-          "id": "xiu-27",
-          "name": "轸",
-          "aliases": [
-            "轸宿"
-          ],
-          "short": "二十八星宿之一：轸宿。",
-          "explanation": "“轸宿”是二十八星宿之一。万年历显示的是当日对应星宿；其吉凶等传统解释属于历书文化的一部分。"
-        }
-      ]
+      "id": "wuxing-reference",
+      "name": "五行",
+      "summary": "金、木、水、火、土及生克关系属于完整体系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
     },
     {
-      "id": "nayin",
+      "id": "nayin-reference",
       "name": "纳音",
-      "summary": "解释四柱纳音及三十纳音名称。",
-      "terms": [
-        {
-          "id": "nayin",
-          "name": "纳音",
-          "short": "六十甲子配属的三十组象征性五行名称。",
-          "explanation": "纳音把六十甲子两两配成三十组名称，如海中金、炉中火等。万年历会分别显示年、月、日、时四柱的纳音。"
-        },
-        {
-          "id": "nayin-0",
-          "name": "海中金",
-          "short": "三十纳音之一：海中金。",
-          "explanation": "“海中金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是海中金”。"
-        },
-        {
-          "id": "nayin-1",
-          "name": "炉中火",
-          "short": "三十纳音之一：炉中火。",
-          "explanation": "“炉中火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是炉中火”。"
-        },
-        {
-          "id": "nayin-2",
-          "name": "大林木",
-          "short": "三十纳音之一：大林木。",
-          "explanation": "“大林木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是大林木”。"
-        },
-        {
-          "id": "nayin-3",
-          "name": "路旁土",
-          "short": "三十纳音之一：路旁土。",
-          "explanation": "“路旁土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是路旁土”。"
-        },
-        {
-          "id": "nayin-4",
-          "name": "剑锋金",
-          "short": "三十纳音之一：剑锋金。",
-          "explanation": "“剑锋金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是剑锋金”。"
-        },
-        {
-          "id": "nayin-5",
-          "name": "山头火",
-          "short": "三十纳音之一：山头火。",
-          "explanation": "“山头火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是山头火”。"
-        },
-        {
-          "id": "nayin-6",
-          "name": "涧下水",
-          "short": "三十纳音之一：涧下水。",
-          "explanation": "“涧下水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是涧下水”。"
-        },
-        {
-          "id": "nayin-7",
-          "name": "城头土",
-          "short": "三十纳音之一：城头土。",
-          "explanation": "“城头土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是城头土”。"
-        },
-        {
-          "id": "nayin-8",
-          "name": "白蜡金",
-          "short": "三十纳音之一：白蜡金。",
-          "explanation": "“白蜡金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是白蜡金”。"
-        },
-        {
-          "id": "nayin-9",
-          "name": "杨柳木",
-          "short": "三十纳音之一：杨柳木。",
-          "explanation": "“杨柳木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是杨柳木”。"
-        },
-        {
-          "id": "nayin-10",
-          "name": "泉中水",
-          "short": "三十纳音之一：泉中水。",
-          "explanation": "“泉中水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是泉中水”。"
-        },
-        {
-          "id": "nayin-11",
-          "name": "屋上土",
-          "short": "三十纳音之一：屋上土。",
-          "explanation": "“屋上土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是屋上土”。"
-        },
-        {
-          "id": "nayin-12",
-          "name": "霹雳火",
-          "short": "三十纳音之一：霹雳火。",
-          "explanation": "“霹雳火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是霹雳火”。"
-        },
-        {
-          "id": "nayin-13",
-          "name": "松柏木",
-          "short": "三十纳音之一：松柏木。",
-          "explanation": "“松柏木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是松柏木”。"
-        },
-        {
-          "id": "nayin-14",
-          "name": "长流水",
-          "short": "三十纳音之一：长流水。",
-          "explanation": "“长流水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是长流水”。"
-        },
-        {
-          "id": "nayin-15",
-          "name": "沙中金",
-          "short": "三十纳音之一：沙中金。",
-          "explanation": "“沙中金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是沙中金”。"
-        },
-        {
-          "id": "nayin-16",
-          "name": "山下火",
-          "short": "三十纳音之一：山下火。",
-          "explanation": "“山下火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是山下火”。"
-        },
-        {
-          "id": "nayin-17",
-          "name": "平地木",
-          "short": "三十纳音之一：平地木。",
-          "explanation": "“平地木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是平地木”。"
-        },
-        {
-          "id": "nayin-18",
-          "name": "壁上土",
-          "short": "三十纳音之一：壁上土。",
-          "explanation": "“壁上土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是壁上土”。"
-        },
-        {
-          "id": "nayin-19",
-          "name": "金箔金",
-          "short": "三十纳音之一：金箔金。",
-          "explanation": "“金箔金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是金箔金”。"
-        },
-        {
-          "id": "nayin-20",
-          "name": "覆灯火",
-          "short": "三十纳音之一：覆灯火。",
-          "explanation": "“覆灯火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是覆灯火”。"
-        },
-        {
-          "id": "nayin-21",
-          "name": "天河水",
-          "short": "三十纳音之一：天河水。",
-          "explanation": "“天河水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是天河水”。"
-        },
-        {
-          "id": "nayin-22",
-          "name": "大驿土",
-          "short": "三十纳音之一：大驿土。",
-          "explanation": "“大驿土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是大驿土”。"
-        },
-        {
-          "id": "nayin-23",
-          "name": "钗钏金",
-          "short": "三十纳音之一：钗钏金。",
-          "explanation": "“钗钏金”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是钗钏金”。"
-        },
-        {
-          "id": "nayin-24",
-          "name": "桑柘木",
-          "short": "三十纳音之一：桑柘木。",
-          "explanation": "“桑柘木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是桑柘木”。"
-        },
-        {
-          "id": "nayin-25",
-          "name": "大溪水",
-          "short": "三十纳音之一：大溪水。",
-          "explanation": "“大溪水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是大溪水”。"
-        },
-        {
-          "id": "nayin-26",
-          "name": "沙中土",
-          "short": "三十纳音之一：沙中土。",
-          "explanation": "“沙中土”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是沙中土”。"
-        },
-        {
-          "id": "nayin-27",
-          "name": "天上火",
-          "short": "三十纳音之一：天上火。",
-          "explanation": "“天上火”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是天上火”。"
-        },
-        {
-          "id": "nayin-28",
-          "name": "石榴木",
-          "short": "三十纳音之一：石榴木。",
-          "explanation": "“石榴木”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是石榴木”。"
-        },
-        {
-          "id": "nayin-29",
-          "name": "大海水",
-          "short": "三十纳音之一：大海水。",
-          "explanation": "“大海水”是六十甲子纳音体系中的名称之一，用作传统五行分类。它不是现代物质属性，也不应简单理解为“某人就是大海水”。"
-        }
-      ]
+      "summary": "六十甲子与三十纳音的对应关系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
+    },
+    {
+      "id": "jieqi-reference",
+      "name": "二十四节气",
+      "summary": "二十四节气的时令、物候与文化内容，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
+    },
+    {
+      "id": "xiu-reference",
+      "name": "二十八星宿",
+      "summary": "二十八宿、四象及传统星宿体系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
+    },
+    {
+      "id": "zodiac-reference",
+      "name": "生肖关系",
+      "summary": "生肖与地支的六合、三合、相冲等关系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
+    },
+    {
+      "id": "shensha-reference",
+      "name": "神煞",
+      "summary": "吉神宜趋、凶煞宜忌包含大量神煞名称，属于较大的传统体系，之后独立整理。",
+      "referenceOnly": true,
+      "terms": []
     }
   ]
 }
