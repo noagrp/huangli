@@ -59,7 +59,7 @@
     .terms{display:flex;flex-wrap:wrap;gap:8px}
     button.term{border:1px solid rgba(215,187,85,.22);background:#0e130a;color:var(--text);padding:8px 10px;border-radius:999px;cursor:pointer;font:inherit;font-size:13px}
     button.term:hover{border-color:var(--lime);color:var(--lime-soft)}
-    .detail{margin-top:16px;background:#0d1109;border:1px solid var(--border);border-radius:18px;padding:20px;min-height:150px}
+    .detail{margin:0 0 20px;background:#0d1109;border:1px solid var(--border);border-radius:18px;padding:20px;min-height:150px}
     .detail .eyebrow{color:var(--gold);font-size:12px;margin-bottom:6px}
     .detail h2{margin:0 0 8px;color:var(--lime-soft)}
     .detail p{margin:0;color:#d8ddc3;line-height:1.75;font-size:14px}
@@ -83,13 +83,13 @@
     <a class="back" href="https://noagrp.github.io/zhong/">返回 中</a>
   </header>
 
-  <div class="search"><input id="search" type="search" placeholder="搜索：冲、胎神、开、财神…" aria-label="搜索黄历术语"></div>
-  <section class="grid" id="categories"></section>
+  <div class="search"><input id="search" type="search" placeholder="搜索：冲、胎神、开、财神、天德、鬼宿…" aria-label="搜索黄历术语"></div>
   <section class="detail" id="detail">
     <div class="eyebrow">黄历术语</div>
     <h2>选择一个术语</h2>
     <p>点击上面的项目查看解释。</p>
   </section>
+  <section class="grid" id="categories"></section>
 
   <footer><a href="https://noagrp.github.io/wannianli/">万年历</a><span>·</span><a href="https://noagrp.github.io/zhong/">中</a></footer>
 </main>
@@ -105,7 +105,7 @@
     if(!term) return;
     const examples = (term.examples||[]).length ? '<div class="example">例：'+term.examples.join(' · ')+'</div>' : '';
     detailEl.innerHTML = '<div class="eyebrow">'+term.categoryName+'</div><h2>'+term.name+'</h2><p>'+term.explanation+'</p>'+examples;
-    detailEl.scrollIntoView({behavior:'smooth',block:'nearest'});
+    detailEl.classList.add('active');
   }
 
   function renderCategories(){
