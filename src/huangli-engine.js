@@ -108,6 +108,56 @@ class HuangliEngine {
     return category ? category.terms : [];
   }
 
+  explainList(values) {
+    const list = Array.isArray(values) ? values : [values];
+    return list.filter(v => v != null && v !== '').map(value => ({
+      value,
+      explanation: this.getTerm(value)
+    }));
+  }
+
+  explainWannianli(input) {
+    if (!input || typeof input !== 'object') return null;
+    const output = {};
+    for (const [key, value] of Object.entries(input)) {
+      if (value == null || value === '') continue;
+      if (['yi','ji'].includes(key)) {
+        output[key] = {
+          value,
+          explanation: this.getTerm(key === 'yi' ? '宜' : '忌'),
+          items: this.explainActivities(value)
+        };
+      } else if (['jishen','xiongsha'].includes(key)) {
+        output[key] = { value, items: this.explainList(value) };
+      } else if (key === 'bazi') {
+        output[key] = { value, explanation: this.getTerm('八字') };
+      } else if (key === 'chong') {
+        output[key] = { value, explanation: this.getTerm('冲') };
+      } else if (key === 'sha') {
+        output[key] = { value, explanation: this.getTerm('煞') };
+      } else if (key === 'zhixing') {
+        output[key] = { value, explanation: this.getTerm(value) };
+      } else if (key === 'tianshen') {
+        output[key] = { value, explanation: this.getTerm(value) || this.getTerm('值日天神') };
+      } else if (key === 'pengzu') {
+        output[key] = { value, items: this.explainList(value), explanation: this.getTerm('彭祖百忌') };
+      } else if (key === 'jieqi') {
+        output[key] = { value, explanation: this.getTerm(value) || this.getTerm('二十四节气') };
+      } else if (key === 'xiu') {
+        output[key] = { value, explanation: this.getTerm(value) || this.getTerm(value + '宿') || this.getTerm('二十八星宿') };
+      } else if (key === 'nayin') {
+        output[key] = { value, items: this.explainList(value), explanation: this.getTerm('纳音') };
+      } else if (key === 'taishen') {
+        output[key] = { value, explanation: this.getTerm('胎神') };
+      } else if (['xishen','caishen','fushen'].includes(key)) {
+        output[key] = { value, explanation: this.getTerm(key) };
+      } else {
+        output[key] = { value, explanation: this.getTerm(value) || this.getTerm(key) };
+      }
+    }
+    return output;
+  }
+
   listZhixing() {
     const category = this.getCategory('zhixing');
     return category ? category.terms : [];
