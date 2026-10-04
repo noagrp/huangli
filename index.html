@@ -54,6 +54,7 @@
     .search input:focus{border-color:rgba(200,214,95,.65)}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px}
     .category{background:linear-gradient(180deg,var(--surface2),var(--surface));border:1px solid var(--border);border-radius:18px;padding:17px;box-shadow:var(--shadow)}
+    .category.wide{grid-column:1/-1}
     .category h2{margin:0;color:var(--lime-soft);font-size:18px}
     .category>p{margin:8px 0 14px;color:var(--muted);font-size:12px;line-height:1.6}
     .category.reference{box-shadow:none;background:rgba(21,28,15,.58);border-style:dashed}
@@ -140,7 +141,8 @@
       if(category.referenceOnly){
         return '<article class="category reference"><h2>'+category.name+'</h2><p>'+category.summary+'</p><span class="reference-badge">专题内容</span></article>';
       }
-      return '<article class="category"><h2>'+category.name+'</h2><p>'+category.summary+'</p><div class="terms">'+
+      const wideClass = (category.terms || []).length >= 12 ? ' wide' : '';
+      return '<article class="category'+wideClass+'"><h2>'+category.name+'</h2><p>'+category.summary+'</p><div class="terms">'+
         (category.terms.length > 24
           ? category.terms.slice(0,18).map(term=>'<button class="term" data-term="'+term.id+'">'+term.name+'</button>').join('') +
             '<button class="term" data-expand="'+category.id+'">查看全部 '+category.terms.length+'</button>'
